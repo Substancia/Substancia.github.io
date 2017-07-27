@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
+	<link rel="stylesheet" href="stsh.css">
+	<link rel="shortcut icon" type="image/x-icon" href="icon.png" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>National Service Scheme</title>
+
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+<style>
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+	color: blue;
+    display: block;
+    padding: 8px;
+	text-align: center;
+	padding: 10px 20px;
+	text-decoration: none;
+}
+
+li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #ccc;
+    color: white;
+}
+
+.adj {
+	padding: 0px 30px 0px 30px;
+}
+
+.cont {
+	padding: 0 5% 0 5%;
+}
+
+.hideContent {
+  overflow: hidden;
+  height: 3em;
+}
+
+.showContent {
+  height: auto;
+}
+
+.show-more {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.show-more button {float:right;}
+
+.dotext {display: block; float: left;}
+
+</style>
+</head>
+<body>
+
+	<div class="topnav" id="myTopnav" style="padding:10px 20px 10px 20px; z-index:2;">
+		<img src="icon.png" height="70"; width="70"></img>Events 2016-17
+		<a href="contact6.html">Contact us</a>
+		<a href="login1.html">Login</a>
+		<a href="blog1.html">Blog</a>
+		<a href="about.html">What we do</a>
+		<a href="index.html">Home</a>
+		<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+	</div>
+
+<div style="padding:120px 5vw 0px 5vw">
+<div class="adj">
+
+					<div class="row">
+					<div class="cont">
+
+						<h2>Events 2016-17 timeline</h2>
+						<br>
+						<div style="height:1px; padding: 0 10%; background-color:#D3D3D3"></div>
+						<div class="col-sm-12 col-md-6">
+							<br>
+							<h4>Inauguration</h4>
+							<img src="images\events\inaug.jpg" width="100%">
+							<br><br>
+							<div class="content hideContent">
+								<p>NSS started its events for the year with its inauguration on 20th August 2016. By then around 100 volunteers selected through the selection process had enrolled themselves as NSS volunteers via an online form. Renowned social activist and Magsaysay award recipient Ms Aruna Roy was the Chief Guest of the day. Former Governor of West Bengal and civil servant Mr Gopalkrishna Gandhi and Carnatic music vocalist and Magsaysay award recipient Mr T M Krishna participated in the event as distinguished guests and interacted with the students. The NSS activities of the year was inaugurated by Ms Aruna Roy by giving a sapling to Dr K C Sivakumar, the Faculty Adviser of NSS. The sapling has duly been planted in the premises of the NSS office.</p>
+							</div>
+							<div class="show-more">
+								<p class="dotext">. . . .</p>
+								<button>Show more</button>
+							</div>
+						</div>
+
+						<div style="height:1px; padding: 0 10%; background-color:#D3D3D3"></div>
+						<div class="col-sm-12 col-md-6">
+							<br>
+							<h4>Foundation day lecture</h4>
+							<img src="images\events\wilson.jpg" width="100%">
+							<br><br>
+							<div class="content hideContent">
+								<p>NSS Foundation Day lecture was given by renowned Social Activist and Magsaysay Award Recipient Mr Bezwada Wilson on 26th September 2016 at IC&SR Auditorium in IIT Madras. Mr Wilson gave an inspiring lecture on social service and how it should cater to the needs of the marginalised and deprived particularly focussing on the lives of manual scavengers.</p>
+							</div>
+							<div class="show-more">
+								<p class="dotext">. . . .</p>
+								<button>Show more</button>
+							</div>
+						</div>
+					</div>
+					</div>
+
+					<div class="row">
+					<div class="cont">
+						<div style="height:1px; padding: 0 10%; background-color:#D3D3D3"></div>
+						<div class="col-sm-12 col-md-6">
+							<br>
+							<h4>Sign language workshop</h4>
+							<img src="images\events\ability.jpg" width="100%">
+							<br><br>
+							<div class="content hideContent">
+								<p>NSS conducted a sign language workshop in association with Ability Foundation Chennai on 1st October 2016. The workshop opened up possibilities for students to explore the universe of sign language. The workshop was led by Ms. Jayashree Raveendran, Director of Ability Foundation and Ms Vijaya Bhaskar, a sign language interpreter.</p>
+							</div>
+							<div class="show-more">
+								<p id="dotext" class="dotext">. . . .</p>
+								<button>Show more</button>
+							</div>
+						</div>
+
+						<div style="height:1px; padding: 0 10%; background-color:#D3D3D3"></div>
+						<div class="col-sm-12 col-md-6">
+							<br>
+							<h4>Field visit - SOS Children's village</h4>
+							<img src="images\events\sos.jpg" width="100%">
+							<br><br>
+							<div class="content hideContent">
+								<p>A field visit to SOS Children’s Village in East Tambaram was the last event of the odd semester. It was organised on 6th November 2016 with 49 volunteers and 8 managerial team members selected through an online form. Volunteers along with the Managerial Team members left for the village in the morning, spent time there teaching them, interacting with them and playing with them. Mr Jayabaalan, Assistant Village Director interacted with the team.</p>
+							</div>
+							<div class="show-more">
+								<p id="dotext" class="dotext">. . . .</p>
+								<button>Show more</button>
+							</div>
+						</div>
+
+					</div>
+					</div>
+					
+					<div class="row">
+					<div class="cont">
+						<div style="height:1px; padding: 0 10%; background-color:#D3D3D3"></div>
+						<div class="col-sm-12 col-md-6">
+							<br>
+							<h4>CPR workshop</h4>
+							<img src="images\events\cpr.jpg" width="100%">
+							<br><br>
+							<div class="content hideContent">
+								<p>A CPR ( Cardiopulmonary Resuscitation) workshop was conducted on 2nd February 2017 in conjunction with Fortis Malar Hospital. The team explained the working of this life saving measure and the necessary precautions to be taken.</p>
+							</div>
+							<div class="show-more">
+								<p id="dotext" class="dotext">. . . .</p>
+								<button>Show more</button>
+							</div>
+						</div>
+
+						<div style="height:1px; padding: 0 10%; background-color:#D3D3D3"></div>
+						<div class="col-sm-12 col-md-6">
+							<br>
+							<h4>EnAble workshop</h4>
+							<img src="images\events\enable.jpg" width="100%">
+							<br><br>
+							<div class="content hideContent">
+								<p>EnAble Workshop conducted by NSS in association with EnAble India Foundation on 4 February 2017 Bengaluru was an experience one of its kind aimed at sensitizing students about the needs of the disabled community and methods of social inclusion. Mr Vishnu Mohan, Mr Sailesh, Mr Dinesh and Mr Ajmal representing the foundation led the session, each speaking about their disability and other questions of social inclusion.</p>
+							</div>
+							<div class="show-more">
+								<p id="dotext" class="dotext">. . . .</p>
+								<button>Show more</button>
+							</div>
+						</div>
+
+					</div>
+					</div>
+					
+					<div class="row">
+					<div class="cont">
+						<div style="height:1px; padding: 0 10%; background-color:#D3D3D3"></div>
+						<div class="col-sm-12 col-md-6">
+							<br>
+							<h4>NSS lectures on LIFE</h4>
+							<img src="images\events\life.jpg" width="100%">
+							<br><br>
+							<div class="content hideContent">
+								<p>The first edition of NSS Lectures on Life (Learn, Innovate, Find and Enable) featured social activists who served the community and society by bringing into light the conservation and sustenance of life sustaining resources of water and flora. Mr Rajendra Singh popularly known as the Waterman of India, was the first speaker on the topic of water as the elixir of life. The lecture was delivered on 12 March 2017. Following Mr Rajendra Singh, on 14th March 2017, the series featured Mr Abdul Ghani, renowned environmentalist who came with the message for a greener world and the participation of the youth in it.</p>
+							</div>
+							<div class="show-more">
+								<p id="dotext" class="dotext">. . . .</p>
+								<button>Show more</button>
+							</div>
+						</div>
+
+						<div style="height:1px; padding: 0 10%; background-color:#D3D3D3"></div>
+						<div class="col-sm-12 col-md-6">
+							<br>
+							<h4>Movie screening -- "Ek Hazarachi Note"</h4>
+							<center><img src="images\events\ekhazarachinote.jpg" width="50%"></center>
+							<br><br>
+							<div class="content hideContent">
+								<p>NSS screened the critically acclaimed marathi movie “Ek Hazarachi Note” as part of its movie screening for the even semester. It took place in the OAT on 31st March 2017. The movie widespread appraisal and acclaim from the students and general public alike.</p>
+							</div>
+							<div class="show-more">
+								<p id="dotext" class="dotext">. . . .</p>
+								<button>Show more</button>
+							</div>
+						</div>
+
+					</div>
+					</div>
+					
+					<div class="row">
+					<div class="cont">
+						<div style="height:1px; padding: 0 10%; background-color:#D3D3D3"></div>
+						<div class="col-sm-12 col-md-6">
+							<br>
+							<h4>Monthly Collection Drives</h4>
+							<img src="images\events\mcd.jpg" width="100%">
+							<br><br>
+							<div class="content hideContent">
+								<p>National Service Scheme conducted 3 Monthly Collection Drives in the odd semester on 28th August, 2nd October and 29th October respectively. The general collection drive for the academic and hostel zones was conducted from 2nd to 5th November 2016. NSS organised three more Monthly Collection Drives in the even semester on 15th January, 26th February and 9th April 2017. The general collection drive was from 30th March to 3rd April 2017. The collected items including perishables and non-perishables was donated to multiple NGOs working within the city. These include the Gold Heart Foundation, Deepam Trust (Velachery) and Faith Home (Porur).</p>
+							</div>
+							<div class="show-more">
+								<p id="dotext" class="dotext">. . . .</p>
+								<button>Show more</button>
+							</div>
+						</div>
+
+					</div>
+					</div>
+					
+</div>
+</div>
+
+	<footer class="site-footer">
+		
+		Designed by:
+		<div>
+			<div class="chip">
+				<a href="http://substancia.github.io" target="_blank">
+					<img src="https://avatars2.githubusercontent.com/u/27500147?v=3&u=da556d749664aa6bbd83f48eccec92299ddcacac&s=400" alt="Person" width="96" height="96">
+					<div class="chipoverlay">
+						<div class="chiptext">Mohammad Jibin</div>
+					</div>
+				</a>
+			</div>
+			<div class="chip">
+				<a href="http://joeydash.com" target="_blank">
+					<img src="https://avatars0.githubusercontent.com/u/25436112?v=3&s=400" alt="Person" width="96" height="96">
+					<div class="chipoverlay">
+						<div class="chiptext">Mritunjoy Das</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		
+		<center>© National Service Scheme, IIT Madras</center>
+		
+	</footer>
+	
+	<script>
+	
+		function myFunction() {
+		var x = document.getElementById("myTopnav");
+		if (x.className === "topnav") {
+			x.className += " responsive";
+		} else {
+			x.className = "topnav";
+		}
+	}
+	
+$(".show-more button").on("click", function() {
+  var $this = $(this);
+  var $content = $this.parent().prev("div.content");
+  var linkText = $this.text().toUpperCase();
+
+  if (linkText === "SHOW MORE") {
+    linkText = "Show less";
+    $content.switchClass("hideContent", "showContent", 400);
+  } else {
+    linkText = "Show more";
+    $content.switchClass("showContent", "hideContent", 400);
+  };
+
+  $this.text(linkText);
+});
+
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,390 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
+	<link rel="stylesheet" href="stsh.css">
+	<link rel="shortcut icon" type="image/x-icon" href="icon.png" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>National Service Scheme</title>
+
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+<style>
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+	color: blue;
+    display: block;
+    padding: 8px;
+	text-align: center;
+	padding: 10px 20px;
+	text-decoration: none;
+}
+
+li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #ccc;
+    color: white;
+}
+
+#grad1 {
+    background: #f2f2f2; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#f2f2f2, greyw); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#f2f2f2, grey); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#f2f2f2, grey); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#f2f2f2, grey); /* Standard syntax (must be last) */
+}
+
+#grad2 {
+    background: #f5f5f5; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left top, white, lightgrey); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, white, lightgrey); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, white, lightgrey); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, white, lightgrey); /* Standard syntax (must be last) */
+}
+
+.adj {
+	padding: 0px 30px 0px 30px;
+}
+
+.cont {
+	padding: 0 5% 0 5%;
+}
+
+.hideContent {
+  overflow: hidden;
+  height: 3em;
+}
+
+.showContent {
+  height: auto;
+}
+
+.show-more {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.show-more button {float:right;}
+
+.dotext {display: block; float: left;}
+
+.upcoming {
+    box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.2);
+	width: 70%;
+	text-align:center;
+	border: 1px solid lightgrey;
+}
+
+@media screen and (max-width: 930px) {
+.upcoming {width: 70%;}
+}
+
+@media screen and (max-width: 930px) {
+.upcoming {width: 100%;}
+}
+
+</style>
+</head>
+<body style="min-height: 100vh;">
+
+	<div class="topnav" id="myTopnav" style="padding:10px 20px 10px 20px; z-index:2;">
+		<img src="icon.png" height="70"; width="70"></img>What we do
+		<a href="contact6.html">Contact us</a>
+		<a href="login1.html">Login</a>
+		<a href="blog1.html">Blog</a>
+		<a href="about.html">What we do</a>
+		<a href="index.html">Home</a>
+		<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+	</div>
+
+<div style="padding:120px 5vw 0px 5vw">
+<div id="grad1">
+	<h4>
+		<ul>
+			<li class="active" style="display:none"><a data-toggle="tab" href="#home"></a></li>
+			<li><a data-toggle="tab" href="#events">Events</a></li>
+			<li><a data-toggle="tab" href="#projects">Projects</a></li>
+			<li><a data-toggle="tab" href="#winterns">Winterns</a></li>
+			<li><a data-toggle="tab" href="#other">Other initiatives</a></li>
+		</ul>
+    </h4>
+</div>
+<div class="adj">
+
+			<div class="tab-content" style="padding: 0 10%">
+
+				<div id="home" class="tab-pane fade in active">
+				
+					<h2 style="padding-top:20px">We conduct Events</h2><p style="padding-left:20px">to develop...<br>blah<br>blah<br>blah</p>
+					<div class="row">
+					<div class="cont">
+						<br>
+						<div class="col-sm-12 col-md-6">
+							<br>
+							<h4>CPR workshop</h4>
+							<img src="images\events\cpr.jpg" width="100%">
+							<br><br>
+							<div class="content hideContent">
+								<p>A CPR ( Cardiopulmonary Resuscitation) workshop was conducted on 2nd February 2017 in conjunction with Fortis Malar Hospital. The team explained the working of this life saving measure and the necessary precautions to be taken.</p>
+							</div>
+							<div class="show-more">
+								<p id="dotext" class="dotext">. . . .</p>
+								<button>Show more</button>
+							</div>
+						</div>
+
+						<div class="col-sm-12 col-md-6">
+							<br>
+							<h4>Field visit - SOS Children's village</h4>
+							<img src="images\events\sos.jpg" width="100%">
+							<br><br>
+							<div class="content hideContent">
+								<p>A field visit to SOS Children’s Village in East Tambaram was the last event of the odd semester. It was organised on 6th November 2016 with 49 volunteers and 8 managerial team members selected through an online form. Volunteers along with the Managerial Team members left for the village in the morning, spent time there teaching them, interacting with them and playing with them. Mr Jayabaalan, Assistant Village Director interacted with the team.</p>
+							</div>
+							<div class="show-more">
+								<p id="dotext" class="dotext">. . . .</p>
+								<button>Show more</button>
+							</div>
+						</div>
+					</div>
+					</div>
+					<br><br><a href="oldevents.html"><button style="float:right; color:black; font-size:20px;">Show Events 2016-17</button></a><br><br>
+					<div style="height:1px; padding: 0 10%; background-color:#D3D3D3"></div><br><br><br>
+
+					<h2>We conduct Projects</h2><p style="padding-left:20px">to foster...<br>blah<br>blah<br>blah</p>
+					<div class="row">
+					<div class="cont">
+						<br>
+						<div class="col-sm-12 col-md-6">
+							<br>
+							<h4>Project Suyam</h4>
+							<img src="images\projects\suyam.jpg" width="100%">
+							<br><br>
+							<div class="content hideContent">
+								<p>This hugely successful project provides assistance to Suyam Charitable Trust in teaching and mentoring students of Bharathamatha Primary School. The Project aims at reaching out to students who have immense potential but do not have enough resources to realize them, and provides them with not just resources but also guidance and one-on-one teaching sessions.</p>
+							</div>
+							<div class="show-more">
+								<p id="dotext" class="dotext">. . . .</p>
+								<button>Show more</button>
+							</div>
+						</div>
+
+						<div class="col-sm-12 col-md-6">
+							<br>
+							<h4>Project Paws</h4>
+							<img src="images\projects\projectpaws.jpg" width="100%">
+							<br><br>
+							<div class="content hideContent">
+								<p>Project Paws works with the Blue Cross Society in caring for animals. They also organize meetings and create posters, among many other things, to create awareness.</p>
+							</div>
+							<div class="show-more">
+								<p id="dotext" class="dotext">. . . .</p>
+								<button>Show more</button>
+							</div>
+						</div>
+					</div>
+					</div>
+					<br><br><a href="oldprojects.html"><button style="float:right; color:black; font-size:20px;">Show Projects 2016-17</button></a><br><br>
+					<div style="height:1px; padding: 0 10%; background-color:#D3D3D3"></div><br><br><br>
+
+					<h2>We conduct Winterns</h2><p style="padding-left:20px">to induce...<br>blah<br>bkah<br>blah</p>
+					<div class="row">
+					<div class="cont">
+						<br>
+						<div class="col-sm-12 col-md-6">
+							<br>
+							<h4>Wintern at Hope</h4>
+							<img src="images\Winterns\hope.jpg" width="100%">
+							<br><br>
+							<div class="content hideContent">
+								<p>Volunteers visited the Hope Special School at Ambattur, and spent over a week with the children, and helped in teaching them according to personalized lesson plans, aimed at helping them to become independent in small measures. They also went for a one-day visit to the centre at Aminjikarai, which is a shelter for abandoned, intellectually-disabled boys.</p>
+							</div>
+							<div class="show-more">
+								<p id="dotext" class="dotext">. . . .</p>
+								<button>Show more</button>
+							</div>
+						</div>
+
+						<div class="col-sm-12 col-md-6">
+							<br>
+							<h4>Wintern at School for the Blind</h4>
+							<img src="images\Winterns\schoolforblind.jpg" width="100%">
+							<br><br>
+							<div class="content hideContent">
+								<p>Volunteers who were a part of Project Sravyam went to the Government School for the Blind, Kasargod and taught the children in various classes in topics ranging from English to Economics. </p>
+							</div>
+							<div class="show-more">
+								<p id="dotext" class="dotext">. . . .</p>
+								<button>Show more</button>
+							</div>
+						</div>
+					</div>
+					</div>
+					<br><br><a href="oldwinterns.html"><button style="float:right; color:black; font-size:20px;">Show Winterns 2016-17</button></a><br><br>
+					<div style="height:1px; padding: 0 10%; background-color:#D3D3D3"></div><br><br><br>
+
+					<h2>We take other initiatives</h2><p style="padding-left:20px">to develop...<br>blah<br>blah<br>blah</p>
+					<div class="row">
+					<div class="cont">
+						<br>
+						<div class="col-sm-12 col-md-6">
+							<br>
+							<h4>NSS Chennai Chapters' Conclave</h4>
+							<img src="images\other\conclave.jpg" width="100%">
+							<br><br>
+							<div class="content hideContent">
+								<p>National Service Scheme proudly hosted the second edition of NSS Chennai Chapters’ Conclave on 8th April 2017 in Mahatma Hall (Room:HSB 356). The conclave brought together NSS units from 3 colleges in Chennai namely Anna University, SSN college of Engineering and Sri Venkateshwara College of Engineering, together pledging on a joint collaboration and exploring areas of common service.</p>
+							</div>
+							<div class="show-more">
+								<p class="dotext">. . . .</p>
+								<button>Show more</button>
+							</div>
+						</div>
+
+						<div class="col-sm-12 col-md-6">
+							<br>
+							<h4>Diwali celebration at Government Girls Home in Purasaivakkam</h4>
+							<img src="images\other\ksd.jpg" width="100%">
+							<br><br>
+							<div class="content hideContent">
+								<p>NSS Foundation Day lecture was given by renowned Social Activist and Magsaysay Award Recipient Mr Bezwada Wilson on 26th September 2016 at IC&SR Auditorium in IIT Madras. Mr Wilson gave an inspiring lecture on social service and how it should cater to the needs of the marginalised and deprived particularly focussing on the lives of manual scavengers.</p>
+							</div>
+							<div class="show-more">
+								<p class="dotext">. . . .</p>
+								<button>Show more</button>
+							</div>
+						</div>
+					</div>
+					</div>
+					<br><br><a href="oldinitiatives.html"><button style="float:right; color:black; font-size:20px;">Show other initiatives 2016-17</button></a><br><br>
+					<div style="height:1px; padding: 0 10%; background-color:#D3D3D3"></div><br><br><br>
+
+				</div>
+
+				<div id="events" class="tab-pane fade">
+
+					<h3>Upcoming Events</h3>
+
+					<center>
+					<div id="grad2" class="upcoming">
+						<h4>NSS Orientation</h4><br>
+						<p>Date: August 2, 2017 (Wednesday)</p>
+						<p>Time: 6 P.M.</p>
+						<p>Venue: Central Lecture Theatre</p>
+					</div>
+					</center>
+					
+				</div>
+
+				<div id="projects" class="tab-pane fade">
+
+					<h3>Upcoming Projects</h3>
+
+					<center>
+					Sorry, no project details available right now.
+					</center>
+
+				</div>
+
+				<div id="winterns" class="tab-pane fade">
+
+					<h3>Upcoming Winterns</h3>
+
+					<center>
+					Sorry, no wintern details available right now.
+					</center>
+
+				</div>
+
+				<div id="other" class="tab-pane fade">
+
+					<h3>Other Upcoming Initiatives</h3>
+
+					<center>
+					Sorry, no details available right now.
+					</center>
+
+				</div>
+
+			</div>
+			<br><br>
+
+</div>
+</div>
+
+	<footer class="site-footer">
+		
+		Designed by:
+		<div>
+			<div class="chip">
+				<a href="http://substancia.github.io" target="_blank">
+					<img src="https://avatars2.githubusercontent.com/u/27500147?v=3&u=da556d749664aa6bbd83f48eccec92299ddcacac&s=400" alt="Person" width="96" height="96">
+					<div class="chipoverlay">
+						<div class="chiptext">Mohammad Jibin</div>
+					</div>
+				</a>
+			</div>
+			<div class="chip">
+				<a href="http://joeydash.com" target="_blank">
+					<img src="https://avatars0.githubusercontent.com/u/25436112?v=3&s=400" alt="Person" width="96" height="96">
+					<div class="chipoverlay">
+						<div class="chiptext">Mritunjoy Das</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		
+		<center>© National Service Scheme, IIT Madras</center>
+		
+	</footer>
+	
+	<script>
+	
+		function myFunction() {
+		var x = document.getElementById("myTopnav");
+		if (x.className === "topnav") {
+			x.className += " responsive";
+		} else {
+			x.className = "topnav";
+		}
+	}
+	
+$(".show-more button").on("click", function() {
+  var $this = $(this);
+  var $content = $this.parent().prev("div.content");
+  var linkText = $this.text().toUpperCase();
+
+  if (linkText === "SHOW MORE") {
+    linkText = "Show less";
+    $content.switchClass("hideContent", "showContent", 400);
+  } else {
+    linkText = "Show more";
+    $content.switchClass("showContent", "hideContent", 400);
+  };
+
+  $this.text(linkText);
+});
+
+	</script>
+	
+</body>
+</html>
