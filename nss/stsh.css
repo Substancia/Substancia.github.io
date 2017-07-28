@@ -40,9 +40,11 @@ background-color:#ff8000;
 color: #f2f2f2;
 font-size: 30px;
 padding-top:140px;
+position: relative;
 /*padding-left:5%;
 padding-right:15%;*/
 text-align: center;
+z-index: 10;
 }
 
 img {
@@ -58,6 +60,7 @@ img {
 	bottom: 0;
 	position: relative;
 	text-align: center;
+	clear: both;
 }
 
 .chip {
@@ -98,6 +101,11 @@ img {
 }
 
 .chip a {text-decoration: none;}
+
+#page-wrap { width: 75%; margin: 15px auto; }
+#main { float: right; overflow: auto; }
+#sidebar { width: 25%; height: 100vh; position: fixed; top: 0; padding-top: 280px; border: 1px solid grey; background-color: blue; }
+
 @media screen and (max-width: 930px) {
 	.cont {font-size:18px; padding:0% 20%;}
   .topnav a:not(:first-child) {display: none;}
@@ -107,6 +115,7 @@ img {
   }
 	.imgview {width: 400px;}
 	.site-footer {font-size: 24px;}
+	#sidebar { width: 25%; height: 100vh; position: fixed; padding-top: 280px; }
 }
 
 @media screen and (max-width: 930px) {
@@ -124,5 +133,6 @@ img {
   }
 	.imgview {width: 100%;}
 	.site-footer {font-size: 18px;}
+	#sidebar { width: 100%; height: auto; position: relative; padding-top: 5px; }
 }
 
