@@ -47,6 +47,10 @@ text-align: center;
 z-index: 10;
 }
 
+.capt {
+	font-size: 40px;
+}
+
 img {
 	margin-right: 20px;
 }
@@ -114,6 +118,7 @@ img {
     float: right;
     display: block;
   }
+	.capt {font-size: 40px;}
 	.imgview {width: 400px;}
 	.site-footer {font-size: 24px;}
 	#sidebar { width: 25%; height: 100vh; position: fixed; padding-top: 280px; }
@@ -132,6 +137,7 @@ img {
     display: block;
     text-align: left;
   }
+	.capt {font-size: 30px;}
 	.imgview {width: 100%;}
 	.site-footer {font-size: 18px;}
 	#sidebar { width: 100%; height: auto; position: relative; padding-top: 5px; }
