@@ -111,6 +111,10 @@ img {
 #sidebar li { padding: 10px; }
 #sidebar { width: 25%; height: 100vh; position: fixed; top: 0; padding-top: 280px; padding-left: 60px; border: 1px solid grey; background-color: #ffaa00; }
 
+.mobilehide {
+	display: block;
+}
+
 @media screen and (max-width: 930px) {
 	.cont {font-size:18px; padding:0% 20%;}
   .topnav a:not(:first-child) {display: none;}
@@ -122,6 +126,7 @@ img {
 	.imgview {width: 400px;}
 	.site-footer {font-size: 24px;}
 	#sidebar { width: 25%; height: 100vh; position: fixed; padding-top: 280px; }
+	.mobilehide {display:block;}
 }
 
 @media screen and (max-width: 930px) {
@@ -141,5 +146,6 @@ img {
 	.imgview {width: 100%;}
 	.site-footer {font-size: 18px;}
 	#sidebar { width: 100%; height: auto; position: relative; padding-top: 5px; }
+	.mobilehide {display:none;}
 }
 
