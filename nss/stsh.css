@@ -14,6 +14,7 @@ height:100%;}
   width: 100%;
   font-size: 36px;
   color: #f2f2f2;
+  z-index: 20;
 }
 
 .topnav a {
@@ -111,8 +112,14 @@ img {
 #sidebar li { padding: 10px; }
 #sidebar { width: 25%; height: 100vh; position: fixed; top: 0; padding-top: 280px; padding-left: 60px; border: 1px solid grey; background-color: #ffaa00; }
 
+#main h2 {padding-left: 20%;}
+
 .mobilehide {
 	display: block;
+}
+
+.adj {
+	padding: 0px 30px 0px 30px;
 }
 
 @media screen and (max-width: 930px) {
@@ -127,10 +134,12 @@ img {
 	.site-footer {font-size: 24px;}
 	#sidebar { width: 25%; height: 100vh; position: fixed; padding-top: 280px; }
 	.mobilehide {display:block;}
+	#main h2 {padding-left: 20%;}
+	.adj {padding: 0px 30px 0px 30px;}
 }
 
 @media screen and (max-width: 930px) {
-	.cont {font-size:14px; padding:0% 20%;}
+	.cont {font-size:14px; padding:0% 5%;}
   .topnav.responsive {position: fixed;}
   .topnav.responsive .icon {
     position: absolute;
@@ -147,5 +156,7 @@ img {
 	.site-footer {font-size: 18px;}
 	#sidebar { width: 100%; height: auto; position: relative; padding-top: 5px; }
 	.mobilehide {display:none;}
+	#main h2 {padding-left: 2%;}
+	.adj {padding: 0px 2%;}
 }
 
