@@ -15,18 +15,27 @@
 
 <style>
 
-ul {
+#chevron li {
+	list-style-type: none;
+}
+
+#chevron li:before {
+	content: "\e080";
+    font-family: 'Glyphicons Halflings';
+}
+
+#grad1 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
 
-li {
+#grad1 li {
     float: left;
 }
 
-li a {
+#grad1 li a {
 	color: blue;
     display: block;
     padding: 8px;
@@ -35,12 +44,12 @@ li a {
 	text-decoration: none;
 }
 
-li a.active {
+#grad1 li a.active {
     background-color: #4CAF50;
     color: white;
 }
 
-li a:hover:not(.active) {
+#grad1 li a:hover:not(.active) {
     background-color: #ccc;
     color: white;
 }
@@ -59,6 +68,14 @@ li a:hover:not(.active) {
     background: -o-linear-gradient(bottom right, white, lightgrey); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(bottom right, white, lightgrey); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to bottom right, white, lightgrey); /* Standard syntax (must be last) */
+}
+
+.projectgrad2 {
+	padding: 0 5%;
+}
+
+.collapse {
+	border: 1px solid lightgrey;
 }
 
 .cont {
@@ -281,24 +298,401 @@ li a:hover:not(.active) {
 					<h3>Upcoming Events</h3>
 
 					<center>
-					<div id="grad2" class="upcoming">
-						<h4>NSS selection test</h4><br>
-						<p>Date: August 7, 2017 (Monday)</p>
-						<p>Time: 6:30 P.M.</p>
-						<p>Venue: ClassRoom Complex (CRC)</p>
-					</div>
+<!--					<div id="grad2" class="upcoming">
+						<h4>NSS Inauguration</h4><br>
+						<p>Chief Guest: <b>M S Swaminathan</b></p>
+						<p>Date: August 19, 2017 (Saturday)</p>
+						<p>Time: 11:30 A.M.</p>
+						<p>Venue: Centre Lecture Theatre (CLT)</p>
+					</div>-->
+					Sorry, no event details available right now.
 					</center>
 					
 				</div>
 
 				<div id="projects" class="tab-pane fade">
+				<div class="container-fluid">
 
-					<h3>Upcoming Projects</h3>
+					<br><h2 style="padding-top: 20px">PROJECTS 2017-18</h2><br><br>
 
-					<center>
-					Sorry, no project details available right now.
-					</center>
+					<div style="padding: 0px 20px">
+					Conducted in collaboration with governmental and non-governmental organizations around the country. Projects are the focus of the National Service Scheme. They embody the spirit of service that we wish to inculcate in every volunteer, and allow the volunteers to create a tangible impact on the society. NSS Projects are classified under three verticals – Teaching, Bring A Change and Content Generation.<br>
+					Each project is administered by dedicated Project Representatives, under the supervision and coordination of the Project Administration Team.<br>
+					<br>For more details mail us at <a href="nssiitm.pa@gmail.com">nssiitm.pa@gmail.com</a><br><br><br><br>
 
+					<h3>TEACHING PROJECTS</h3>
+					<ul id="chevron">
+						<li><a data-target="#suyam" data-toggle="collapse">PROJECT SUYAM</a>
+						<div id="grad2">
+							<div id="suyam" class="collapse">
+								<br><h2 style="padding-top: 20px">PROJECT SUYAM</h2><br><br>
+
+								<div style="padding: 0px 20px">
+								<b>NGO: SUYAM</b> (<a href="www.suyam.org/">www.suyam.org/</a>)<br><br>
+					
+								<b>Vision</b>: Project Suyam was established to provide assistance to SUYAM charitable trust in teaching and mentoring students of BHARATHAMATHA PRIMARY SCHOOL. Our primary objective is to create an atmosphere for students who don’t have enough resources but have immense potential, who lack guidance but have high ambitions, are provided with instrumental support so that they can fulfil their dreams. We do this by leveraging resources and providing them with quality education. Frequently, a team of volunteers makes a visit to the school and helps students, not only in their studies but also in giving them moral support so that they find themselves at par with others.<br><br><br><br>
+					
+								<b>Objectives:</b> Teaching school children from class 8 to 12 both Science and Commerce Students.<br><br>
+
+								<br><b>Centres:</b> IIT madras and Suyam Centre, Vyasarpadi<br><br>
+
+								<br>Classes are conducted on weekends in Suyam charitable trust and occasionally classes are held at IIT Madras during weekdays.<br><br><br>
+
+								<h4><b>Criteria for selection of Volunteers</b></h4>
+								<ul>
+									<li>Dedication towards the project</li>
+									<li>Teaching skills</li>
+									<li>Ability to interact with children</li>
+									<li>Knowledge in Tamil, but not mandatory</li>
+								</ul><br><br>
+								</div>
+							</div>
+						</div>
+						</li>
+
+						<li><a data-target="#erudite" data-toggle="collapse">PROJECT ERUDITE</a>
+						<div id="grad2">
+							<div id="erudite" class="collapse">
+								<br><h2 style="padding-top: 20px">PROJECT ERUDITE</h2><br><br>
+
+								<div style="padding: 0px 20px">
+								<b>NGO: Chudar</b> (<a href="http://chudar.org">http://chudar.org</a>)<br><br>
+					
+								<b>Objective/Vision:</b>: Teach Science, Math and English to under-privileged children. The project will cover centres in Adyar, Saidapet, Kotturpuram and Triplicane.<br><br><br><br>
+					
+								<b>Description:</b> The project will teach children studying in classes 3- 8 in slum areas.Classes will be in weekdays from 5 pm to 8pm.Content for Math and English classeswill be created in cooperation with Chudar whereas Science classes will follow the school textbooks. Weekend classes will focus on fun activities related to their studies that children can engage in.<br><br>
+
+								<b>Criteria for selection of Volunteers:</b> Volunteers who are interested in teaching will also be given preference. Basic communication skills in Tamil is preferred, but not mandatory.<br><br>
+								</div>
+							</div>
+						</div>
+						</li>
+
+						<li><a data-target="#nms" data-toggle="collapse">PROJECT NMS</a>
+						<div id="grad2">
+							<div id="nms" class="collapse">
+								<br><h2 style="padding-top: 20px">PROJECT NMS</h2><br><br>
+
+								<div style="padding: 0px 20px">
+					
+								<b>Vision</b>: The Project aims at improving the speaking, reading and writing skills in English of high school students by interacting with them and other activities like story telling sessions, language based puzzles group discussions etc. This will help the students get a wider exposure to the language so that they are able to use it with confidence.<br><br><br><br>
+					
+								<br><b>Centres:</b> Nehru Middle School, Velachery<br><br>
+
+								<br><b>General Information:</b> Classes will be held at the Nehru Middle School, every Saturday from 3:00 pm to 5:00 pm.<br>
+								The volunteers will be expected to interact with the kids in English and encourage them to be more open and overcome their limitations. They will also be expected to prepare worksheets (under suitable guidance).<br><br>
+
+								<<b>Criteria for selection of Volunteers:</b> Volunteers who can understand and speak Tamil, speak English in an eloquent manner and enthusiastic about teaching.<br><br>
+								</div>
+							</div>
+						</div>
+						</li>
+
+						<li><a data-target="#sos" data-toggle="collapse">PROJECT SOS</a>
+						<div id="grad2">
+							<div id="sos" class="collapse">
+								<br><h2 style="padding-top: 20px">PROJECT SOS</h2><br><br>
+
+								<div style="padding: 0px 20px">
+								<b>About SOS Village:</b>: SOS is a Non- governmental Organisation working for providing a homely shelter for millions of orphaned,
+abandoned and destitute children. What makes SOS stand apart from another initiatives on the same line is the
+environment at their campuses. The organization has 546 ‘villages’ worldwide in sprawling campuses where the
+children are taken care in homes nurtured by a mother. One home will have 6-10 kids being taken care of by a
+mother. Many villages provide infrastructure ranging from playgrounds to schools. SOS villages could be found
+in 130 countries across the globe.<br><br>
+
+								For more details- <a href="https://www.soschildrensvillages.in/where-we- work/chennai">https://www.soschildrensvillages.in/where-we- work/chennai</a><br><br>
+					
+								<b>About the Project:</b> The project aims at imparting conceptual knowledge in Science and Mathematics to students of 6 th to 8 th grade
+studying under the Tamil Nadu state board .SOS Village, Chennai is located in East Tambaram which is nearly
+17 km away from Velachery Gate, IIT Madras.<br><br>
+
+								<b>Schedule:</b> Weekly 2 hour sessions on all Sundays (1 hour each for Science and Maths) beginning after Quiz I.<br><br>
+								</div>
+							</div>
+						</div>
+						</li>
+
+						<li><a data-target="#neighbour" data-toggle="collapse">TEACHING YOUR NEIGHBOUR</a>
+						<div id="grad2">
+							<div id="neighbour" class="collapse">
+								<br><h2 style="padding-top: 20px">TEACHING YOUR NEIGHBOUR</h2><br><br>
+
+								<div style="padding: 0px 20px">
+								<b>What do we do:</b>: The selected volunteers get to teach<br>
+								1.students from 8-12 standard students studying in nearby KV and Vana Vani schools and help them in their
+academics ( some levels all of you might have breezed through in your way to IIT).<br>
+								2.And also some students in the residential area, who might be from 3-8 standards and help them through their
+normal academics. These children don&#39;t belong to the school, most probably will be the staff children.
+We have already talked to the principal of the school, and we shall most probably be dealing with the NTSE
+and KVPY content.<br><br>
+
+								<b>What is in for you:</b> If you are part of this project , the criteria of being in atleast one of NSS/NSO/NCC will be fulfilled as
+you are a part of NSS and you can also pursue your passion of teaching.<br>
+								The place you teach is very near, almost the same as that of CRC, so you can teach in your free slots ,
+no need to dig out time.<br>
+								And the thank you that the students are going to say after all your efforts is the biggest perk of all.<br><br>
+
+								<b>Criteria for selection of volunteers:</b> Passion and enthusiasm is our main criteria. Basic communication skills in
+Tamil is preferred, but not mandatory.<br><br>
+								</div>
+							</div>
+						</div>
+						</li>
+
+						<li><a data-target="#olympiad" data-toggle="collapse">TEACHING FOR NATIONAL OLYMPIAD</a>
+						<div id="grad2">
+							<div id="olympiad" class="collapse">
+								<br><h2 style="padding-top: 20px">TEACHING FOR NATIONAL OLYMPIAD</h2><br><br>
+
+								<div style="padding: 0px 20px">
+								Collaboration with Chennai High School, Kottur.<br><br>
+
+								<b>Objective:</b> To guide 7 th , 8th, 9th standard students who can’t afford coaching and are really interested in maths
+to crack Olympiads like IMO, for around 50 students.<br>
+								Classes will be on weekdays (3:30pm-5:30pm).<br><br>
+								</div>
+							</div>
+						</div>
+						</li>
+
+						<li><a data-target="#velicham" data-toggle="collapse">VELICHAM</a>
+						<div id="grad2">
+							<div id="velicham" class="collapse">
+								<br><h2 style="padding-top: 20px">VELICHAM</h2><br><br>
+
+								<div style="padding: 0px 20px">
+								<b>NGO:</b> Seva Samajam Children’s Home<br><br>
+
+								<b>Description of NGO:</b> The Home is an organization devoted to the rehabilitation education and upliftment of orphans and destitute children. Home has around 100 boys and girls between the ages of 5 and 18. Every year more than 50 students pass out of the 10th and 12th standard.<br><br>
+
+								<b>Objective:</b> To guide 10-12 both science and commerce students.<br>Weekdays 5-7 / Weekends<br>Tamil speaking Volunteers are most welcome since its an Tamil Medium School.<br><br>
+								</div>
+							</div>
+						</div>
+						</li>
+
+						<li><a data-target="#science" data-toggle="collapse">SCIENCE TEACHING KIT</a>
+						<div id="grad2">
+							<div id="science" class="collapse">
+								<br><h2 style="padding-top: 20px">SCIENCE TEACHING KIT</h2><br><br>
+
+								<div style="padding: 0px 20px">
+								<b>Objective:</b> We envision to make science learning fun and interesting for high school students by taking what
+they learn in classes outside the books.<br>
+								Students will be taught scientific principles and laws using a toy/project/demo that volunteers come up with. In
+addition we will be having presentations, movie/documentary screening, career counselling, quizzes and other
+interesting activities.<br><br>
+
+								<b>Centre:</b> Schools in Chennai<br>
+								School Visits will happen in between the semester on weekends.<br><br>
+
+								<b>Description:</b> Students will be taught scientific principles and laws using a toy/project/demo that volunteers
+come up with. In addition we will be having presentations, movie/documentary screening, career counselling,
+quizzes and other interesting activities.The project consists of a total of 4 visits at different schools in and around
+Chennai.<br><br>
+
+								<b>Criteria:</b> Knowledge of basic high school science. Open to engineering, science as well as humanities students.<br><br>
+
+								<i>Optional Criteria: Basic knowledge of Powerpoint and Word.<br><br></i>
+								</div>
+							</div>
+						</div>
+						</li>
+
+					</ul><br><br>
+
+					<h3>BRING A CHANGE PROJECTS</h3>
+					<ul id="chevron">
+						<li><a data-target="#smile" data-toggle="collapse">BRING A SMILE</a>
+						<div id="grad2">
+							<div id="smile" class="collapse">
+								<br><h2 style="padding-top: 20px">BRING A SMILE</h2><br><br>
+
+								<div style="padding: 0px 20px">
+								<b>Objective:</b> Our objective is to visit a cancer hospital to spend time with children diagnosed with cancer. Our
+goal is to make them happy and engage them into various activities.<br><br>
+
+								<b>Centre:</b> Adyar cancer institute<br>
+								Visits will be held on Saturdays from 9am to 12 noon.<br>
+								We will be visiting adyar cancer institute every Saturday and engage the children in various activities like
+coloring, drawing, solving puzzles.<br>
+								There are no criteria for selection of volunteers but knowledge of origami and creativity would be of much help.<br><br>
+								</div>
+							</div>
+						</div>
+						</li>
+
+						<li><a data-target="#drishti" data-toggle="collapse">DRISHTI</a>
+						<div id="grad2">
+							<div id="drishti" class="collapse">
+								<br><h2 style="padding-top: 20px">DRISHTI</h2><br><br>
+
+								<div style="padding: 0px 20px">
+								<b>Objective:</b> Helping Blind students in studying science, mathematics and English and moreover giving
+them a moral support in leading a better life.<br><br>
+
+								<b>Centre:</b> Near Adayar, Walkable distance from main gate.<br>
+								Classes will be in weekdays according to the free slots of volunteers. Mostly 5.30 to 7.30 in the evening.<br><br>
+
+								<b>Description:</b> We are cordially working with the St. Louis institute for deaf and the blind. They have students
+from 6 th standard to 12 th standard in both English and Tamil medium. They’re following Tamil Nadu State
+board syllabus. They’re spending a lot of time in translating their notes to Braille. We will help them in doing
+that.<br> <b>No need to know Braille.</b><br><br>
+
+								Details of our school: <a href="http://stlouisdeafblindadyar.org">http://stlouisdeafblindadyar.org</a>
+								</div>
+							</div>
+						</div>
+						</li>
+
+						<li><a data-target="#blood" data-toggle="collapse">BLOOD CONNECT</a>
+						<div id="grad2">
+							<div id="blood" class="collapse">
+								<br><h2 style="padding-top: 20px">BLOOD CONNECT</h2><br><br>
+
+								<div style="padding: 0px 20px">
+								<h4><b>Vision &amp; Objectives:</b></h4>
+								<ul>
+									<li>To spread awareness about the importance of blood donation and conduct blood camps as an effort
+from our side.</li>
+									<li>Make people feel the satisfaction of donating blood (saving 3 lives!).</li>
+									<li>Educate people about the common myths and superstitions over blood donation.</li>
+									<li>Improve the network of blood donors to ensure better connection between the donor and recipient.</li>
+								</ul><br><br>
+
+								<b>NGO:</b> Blood Connect<br><br>
+
+								Skill Set Recommended: Creativity, Fine arts.<br><br>
+								</div>
+							</div>
+						</div>
+						</li>
+
+						<li><a data-target="#eride" data-toggle="collapse">ERIDE</a>
+						<div id="grad2">
+							<div id="eride" class="collapse">
+								<br><h2 style="padding-top: 20px">ERIDE</h2><br><br>
+
+								<div style="padding: 0px 20px">
+								<b>Objective/Vision:</b> To digitally literate less privileged people and also to ensure opportunities reaches to rural people to create an impact on the society to make India a 100% digitally literatenation.<br><br>
+
+								<b>Scope:</b> Eride organises groups of volunteers and extends it’s project digital literacy to the target audience. We spread digital literacy among less privileged groups like poorstudents, youth and adults.<br><br>
+
+								<h4><b>Prerequisites:</b></h4>
+								<ul>
+									<li>Communicate with various sources and identify the target audience with the help of the external relations office of Eride.</li>
+									<li>Adjust the time and venue with precision to the target audience and organizers associated if there are any.</li>
+								</ul><br><br>
+
+								<h4><b>Responsibilities:</b></h4>
+								<ul>
+									<li>Have a body for decision making and solving unexpected challenges, accidental events and occurrences.</li>
+									<li>Get well trained volunteers and train others who are a part of the team and ensure that load of work is equally distributed.</li>
+								</ul><br><br>
+
+								<h4><b>Procedure:</b></h4>
+								<ul>
+									<li>Conducting sessions regularly in Tamil &amp; English in nearby less privileged schools with the help of volunteers and devices.</li>
+									<li>To start with, minimum number of sessions to be conducted is two per week* with six volunteers accompanying in each.</li>
+									<li>Taking and delivering effective feedback after each session.</li>
+									<li>Managing volunteersand dealing with school authorities to organise the sessions regularly.</li>
+								</ul><br><br>
+
+								<h4><b>Resources:</b></h4>
+								<ul>
+									<li>Devices: six smart devices are necessary to spread digital literacy among targeted audience.</li>
+									<li>Human resources: Volunteers are required to conduct sessions twice a week.</li>
+									<li>After a while, if the team displays dedication,trustworthiness and commitment, Eride will grant the status of chapter for the Chennaialong with required devices and gadgets to conduct sessions.</li>
+								</ul><br><br>
+
+								<b>Contact details</b>: Email us at <a href="ngoeride@gmail.com">ngoeride@gmail.com</a>
+								</div>
+							</div>
+						</div>
+						</li>
+
+					</ul><br><br>
+
+					<h3>CONTENT GENERATION PROJECTS</h3>
+					<ul id="chevron">
+						<li><a data-target="#hindiwiki" data-toggle="collapse">ENRICHING HINDI WIKIPEDIA</a>
+						<div id="grad2">
+							<div id="hindiwiki" class="collapse">
+								<br><h2 style="padding-top: 20px">ENRICHING HINDI WIKIPEDIA</h2><br><br>
+
+								<div style="padding: 0px 20px">
+								<b>Objective:</b> To help the Hindi speaking students who are having difficulty in understanding English and also to
+help students who want to learn Hindi.<br><br>
+
+								<b>Project description:</b> Volunteers need to select English articles from Wikipedia and translate those articles in
+Hindi, the articles that are chosen to be translated should not have any Hindi translation anywhere. Volunteers
+will have the full freedom to choose the type of article. Also, the volunteers need to translate some basic Hindi
+words, phrases, etc. to other south Indian languages (only if the volunteer knows Hindi and any one of the south
+Indian language), this task will be given occasionally. Overall the translated article should be simple and lucid.<br><br>
+
+								<b>Criteria for selecting volunteers:</b> The primary criteria for the volunteers for this project is, the volunteers should know proper Hindi and English,
+most importantly they should have a good command in Hindi writing. Volunteers who knows Hindi as well as
+anyone of the south Indian language can also opt for this project<br><br>
+								</div>
+							</div>
+						</div>
+						</li>
+
+						<li><a data-target="#akshara" data-toggle="collapse">AKSHARA</a>
+						<div id="grad2">
+							<div id="akshara" class="collapse">
+								<br><h2 style="padding-top: 20px">AKSHARA</h2><br><br>
+
+								<div style="padding: 0px 20px">
+								<b>Objective/Vision:</b> This project aims to empower school students in the “Komara” village in Andhra Pradesh by preparing
+PowerPoint presentations for Telugu medium students. The content in the presentations mainly include Math
+and Science topics, for classes 6 to 9, that follow the syllabus as mentioned in their textbooks. Relevant videos
+will also be included in the presentations.<br><br>
+
+								<b>Description:</b> The study material prepared will be shared with the “IVil-Komara Teaching Project”. The members in that
+project use them to conduct online classes mostly on a regular basis. The focus is hence on the quality of the
+presentations, rather than their quality.<br><br>
+
+								<b>Criteria for selecting volunteers:</b>
+								<ul>
+									<li>Volunteers should have the basic knowledge of Telugu Script, i.e, they should be able to read and write
+in Telugu.</li>
+									<li>It is advised for them to have a laptop.</li>
+									<li>Enthu to prepare content for classes.</li>
+								</ul><br><br>
+								</div>
+							</div>
+						</div>
+						</li>
+
+						<li><a data-target="#shravyam" data-toggle="collapse">SHRAVYAM</a>
+						<div id="grad2">
+							<div id="shravyam" class="collapse">
+								<br><h2 style="padding-top: 20px">SHRAVYAM</h2><br><br>
+
+								<div style="padding: 0px 20px">
+								<b>NGO:</b> Lit The Light, Chennai.<br><br>
+
+								<b>Objective/ Vision:</b> Create and provide academic, non-academic and competitive exam preparatory materials in
+audio format.<br><br>
+
+								<b>Description:</b> Volunteers have to convert texts into audio material by recording the reading of the text. You can
+do it by yourselves anywhere, anytime but within the deadline. You can use your books as well. But you are
+required follow the guidance of project representatives. One can also include Tamil and Malayalam books. A
+wintern is conducted in government school, Kerala.<br>
+								The website link of the affiliated NGO - <a href="http://stage.litthelight.org/">http://stage.litthelight.org/</a><br><br>
+
+								<b>Criteria:</b> A volunteer should have adequate reading skills. We will also have a small interview/ screening test.<br><br>
+								</div>
+							</div>
+						</div>
+						</li>
+
+					</ul>
+					</div>
+
+				</div>
 				</div>
 
 				<div id="winterns" class="tab-pane fade">
@@ -379,6 +773,7 @@ $(".show-more button").on("click", function() {
 
   $this.text(linkText);
 });
+
 
 	</script>
 	
