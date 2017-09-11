@@ -1,4 +1,6 @@
-body {margin:0;
+body {
+  position: relative;
+  margin:0;
 background-color:#f2f2f2;
 height:100%;}
 
@@ -107,7 +109,7 @@ img {
 
 .chip a {text-decoration: none;}
 
-#page-wrap { width: 75%; margin: 15px auto; }
+#page-wrap { width: 75%; margin: 15px auto; position: relative; }
 #main { float: right; overflow: auto; }
 #sidebar li { padding: 10px; }
 #sidebar { width: 25%; height: 100vh; position: fixed; top: 0; padding-top: 280px; padding-left: 60px; border: 1px solid grey; background-color: #ffaa00; }
@@ -122,24 +124,26 @@ img {
 	padding: 0px 30px 0px 30px;
 }
 
+#googleMap {
+  width: 22%;
+  height: 400px;
+  position: absolute;
+  left: auto;
+  right: 40px;
+  top: 280px;
+}
+
+#respMap {
+  display: none;
+}
+
 @media screen and (max-width: 930px) {
-	.cont {font-size:18px; padding:0% 20%;}
+	.cont {font-size:14px; padding:0% 5%;}
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
   }
-	.capt {font-size: 40px;}
-	.imgview {width: 400px;}
-	.site-footer {font-size: 24px;}
-	#sidebar { width: 25%; height: 100vh; position: fixed; padding-top: 280px; }
-	.mobilehide {display:block;}
-	#main h2 {padding-left: 20%;}
-	.adj {padding: 0px 30px 0px 30px;}
-}
-
-@media screen and (max-width: 930px) {
-	.cont {font-size:14px; padding:0% 5%;}
   .topnav.responsive {position: fixed;}
   .topnav.responsive .icon {
     position: absolute;
@@ -151,6 +155,7 @@ img {
     display: block;
     text-align: left;
   }
+  .topnav.responsive #respMap {display: block;}
 	.capt {font-size: 30px;}
 	.imgview {width: 100%;}
 	.site-footer {font-size: 18px;}
@@ -158,5 +163,6 @@ img {
 	.mobilehide {display:none;}
 	#main h2 {padding-left: 2%;}
 	.adj {padding: 0px 2%;}
+  #googleMap {display: none;}
 }
 

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
+	<link rel="stylesheet" href="stsh.css">
+	<link rel="shortcut icon" type="image/x-icon" href="icon.png" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>National Service Scheme</title>
+
+<style>
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.landing-page {
+  width: 90vw;
+  margin: 0px auto 0;  
+}
+
+.landing-page *,
+.landing-page *:before,
+.landing-page *:after {
+	-webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box; 
+}
+
+.landing-page .module {
+	border: 1px solid rgb(219, 219, 219);
+	border-radius: 4px;
+	float: left;
+	padding: 2em;
+	width: 48%;
+}
+
+.landing-page .module > *:last-child,
+.landing-page .module > *:last-child > *:last-child,
+.landing-page .module > *:last-child > *:last-child > *:last-child {
+	margin: 0;
+	padding: 0;
+}
+
+.landing-page .note {	
+	background-color: rgb(236, 248, 236);
+	border: 1px dashed;	
+	border-radius: 4px;	
+	color: rgb(115, 136, 96);
+	font-family: georgia;	
+	font-size: .9em;
+	font-style: italic;
+	margin: 20px auto;
+	padding: 2em;
+}
+
+.form-appointment {
+	padding: 2em;
+	background-color: rgb(239, 252, 239);
+	border-radius: 4px;
+	border: 1px solid rgb(130, 228, 130);
+	box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.1);
+	font-family: 'PT Sans', Arial, sans-serif;
+	margin: 20px auto;
+}
+
+.form-appointment input[type=text],
+.form-appointment input[type=email],
+.form-appointment input[type=tel],
+.form-appointment textarea {	
+	border: 1px solid rgb(153, 202, 129);
+	border-radius: .2em;	
+	font-family: 'PT Sans', Arial, sans-serif;
+	font-size: 1.1em;
+	padding: .4em 1em;
+	margin: 0 0 .8em;
+	width: 100%;
+  box-shadow: 0 0 8px rgba(0,0,0,.08) inset;
+}
+
+.form-appointment input[type=text],
+.form-appointment input[type=email],
+.form-appointment input[type=tel],
+.form-appointment input[type=submit],
+.form-appointment textarea {	
+	-webkit-transition: all .2s ease-in-out;
+	   -moz-transition: all .2s ease-in-out;
+	        transition: all .2s ease-in-out;
+}
+
+.form-appointment input[type=text]:active,
+.form-appointment input[type=text]:focus,
+.form-appointment input[type=email]:active,
+.form-appointment input[type=email]:focus,
+.form-appointment input[type=tel]:active,
+.form-appointment input[type=tel]:focus,
+.form-appointment textarea:active,
+.form-appointment textarea:focus {	
+  outline: 0;
+  box-shadow: 0 0 6px rgb(176, 226, 188);
+}
+
+.form-appointment textarea {
+	height: 160px;
+}
+
+.form-appointment input[type=submit] {
+	background-color: rgb(118, 207, 118);
+	border: 1px solid rgb(134, 189, 134);
+	border-radius: 4px;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	font-family: inherit;
+	font-size: 1.4em;
+	padding: 10px 18px;
+}
+
+.form-appointment input[type=submit]:hover {
+	background-color: white;
+	color: rgb(118, 207, 118);
+}
+
+.form-appointment .wpcf7-list-item-label {
+	color: rgb(130, 178, 136);
+}
+
+span.wpcf7-list-item {
+	display: block;
+	margin-left: -.02em;
+}
+</style>
+</head>
+
+<body>
+
+	<div class="topnav" id="myTopnav" style="padding:10px 20px 10px 20px">
+		<img src="icon.png" height="70"; width="70"></img>Contact us
+		<a href="contact6.html">Contact us</a>
+		<a href="login1.html">Login</a>
+		<a href="blog1.html">Blog</a>
+		<a href="about.html">What we do</a>
+		<a href="index.html">Home</a>
+		<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+	</div>
+
+	<h1 style="padding:100px 0px 0px 10vw">We would love to hear from you!</h1>
+
+<div class="landing-page" style="padding-top:20px"><div class="form-appointment"><div class="wpcf7" id="wpcf7-f560-p590-o1"><form action="https://script.google.com/macros/s/AKfycbzdNVsEL9yPlyjo0tc1EDLS7lnz5Ytzd-utOPpDLmPwhpBInIVH/exec" method="POST">
+<div class="group" style="padding-top:10px">
+<div style="width: 48%; float: left;">
+<span class="wpcf7-form-control-wrap text-680"><input type="text" name="Name" id="text-680" value="" size="45" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" placeholder="Name"></span><br>
+<span class="wpcf7-form-control-wrap email-680"><input type="email" name="Email" id="email-680" value="" size="45" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" placeholder="Email"></span><br>
+<span class="wpcf7-form-control-wrap tel-630"><input type="tel" name="Phone" id="tel-630" value="" size="45" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" placeholder="Phone"></span><br>
+<span class="wpcf7-form-control-wrap textarea-398"><textarea name="Message" id="textarea-398" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" placeholder="Message, concerns, or requirements"></textarea></span></div>
+</div>
+<div style="text-align: center; padding-top: 2em; border-top: 1px solid rgb(153, 202, 129); margin-top: 1em;"><input type="submit" value="Request My Appointment"></div>
+</form>
+
+</div></div></div>
+
+	<footer class="site-footer">
+		
+		Designed by:
+		<div>
+			<div class="chip">
+				<a href="http://substancia.github.io" target="_blank">
+					<img src="https://avatars2.githubusercontent.com/u/27500147?v=3&u=da556d749664aa6bbd83f48eccec92299ddcacac&s=400" alt="Person" width="96" height="96">
+					<div class="chipoverlay">
+						<div class="chiptext">Mohammad Jibin</div>
+					</div>
+				</a>
+			</div>
+			<div class="chip">
+				<a href="http://joeydash.com" target="_blank">
+					<img src="https://avatars0.githubusercontent.com/u/25436112?v=3&s=400" alt="Person" width="96" height="96">
+					<div class="chipoverlay">
+						<div class="chiptext">Mritunjoy Das</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		
+		<center>© National Service Scheme, IIT Madras</center>
+		
+	</footer>
+	
+<script>
+	
+		function myFunction() {
+		var x = document.getElementById("myTopnav");
+		if (x.className === "topnav") {
+			x.className += " responsive";
+		} else {
+			x.className = "topnav";
+		}
+	}
+	
+$(document).ready(function () {
+  $('input[type=submit]').click(function () {
+    $('input[type=submit]').toggleClass('red');
+  });
+});
+
+function reachFunction(val) {
+    document.getElementById("reach").value = val;
+}
+
+function avail() {
+	var morning = document.getElementById("morning");
+	if (morning.checked === true) {
+		document.getElementById(morningstat).value = "Yes";
+	}	else	{
+		document.getElementById(morningstat).value = "No";
+	}
+	var afternoon = document.getElementById("afternoon");
+	if (afternoon.checked === true) {
+		document.getElementById(afternoonstat).value = "Yes";
+	}	else	{
+		document.getElementById(afternoonstat).value = "No";
+	}
+
+	var monday = document.getElementById("monday");
+	if (monday.checked === true) {
+		document.getElementById(mondaystat).value = "Yes";
+	}	else	{
+		document.getElementById(mondaystat).value = "No";
+	}
+	var tuesday = document.getElementById("tuesday");
+	if (tuesday.checked === true) {
+		document.getElementById(tuesdaystat).value = "Yes";
+	}	else	{
+		document.getElementById(tuesdaystat).value = "No";
+	}
+	var wednesday = document.getElementById("wednesday");
+	if (wednesday.checked === true) {
+		document.getElementById(wednesdaystat).value = "Yes";
+	}	else	{
+		document.getElementById(wednesdaystat).value = "No";
+	}
+	var thursday = document.getElementById("thursday");
+	if (thursday.checked === true) {
+		document.getElementById(thursdaystat).value = "Yes";
+	}	else	{
+		document.getElementById(thursdaystat).value = "No";
+	}
+	var friday = document.getElementById("friday");
+	if (friday.checked === true) {
+		document.getElementById(fridaystat).value = "Yes";
+	}	else	{
+		document.getElementById(fridaystat).value = "No";
+	}
+	var saturday = document.getElementById("saturday");
+	if (saturday.checked === true) {
+		document.getElementById(saturdaystat).value = "Yes";
+	}	else	{
+		document.getElementById(saturdaystat).value = "No";
+	}
+	var sunday = document.getElementById("sunday");
+	if (sunday.checked === true) {
+		document.getElementById(sundaystat).value = "Yes";
+	}	else	{
+		document.getElementById(sundaystat).value = "No";
+	}
+}
+
+</script>
+
+<script data-cfasync="false" type="text/javascript"
+src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+
+</body>
+</html>

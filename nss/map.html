@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
+	<link rel="stylesheet" href="stsh.css">
+	<link rel="shortcut icon" type="image/x-icon" href="icon.png" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>National Service Scheme</title>
+
+</head>
+
+<body>
+	<div class="topnav" id="myTopnav" style="padding:10px 20px 10px 20px">
+		<img src="icon.png" height="70"; width="70"></img>NSS Head Office
+		<a href="contact6.html">Contact us</a>
+		<a href="login1.html">Login</a>
+		<a href="blog1.html">Blog</a>
+		<a href="about.html">What we do</a>
+		<a href="index.html">Home</a>
+		<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+	</div>
+
+	<div id="googleMapExpanded" style="width: 100vw; height: 100vh;"></div>
+	
+	<footer class="site-footer">
+		
+		Designed by:
+		<div>
+			<div class="chip">
+				<a href="http://substancia.github.io" target="_blank">
+					<img src="https://avatars2.githubusercontent.com/u/27500147?v=3&u=da556d749664aa6bbd83f48eccec92299ddcacac&s=400" alt="Person" width="96" height="96">
+					<div class="chipoverlay">
+						<div class="chiptext">Mohammad Jibin</div>
+					</div>
+				</a>
+			</div>
+			<div class="chip">
+				<a href="http://joeydash.com" target="_blank">
+					<img src="https://avatars0.githubusercontent.com/u/25436112?v=3&s=400" alt="Person" width="96" height="96">
+					<div class="chipoverlay">
+						<div class="chiptext">Mritunjoy Das</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		
+		<center>© National Service Scheme, IIT Madras</center>
+		
+	</footer>
+	
+	<script>
+	
+		function myFunction() {
+		var x = document.getElementById("myTopnav");
+		if (x.className === "topnav") {
+			x.className += " responsive";
+		} else {
+			x.className = "topnav";
+		}
+	}
+	
+	function myMap()
+	{
+	  myCenter=new google.maps.LatLng(12.993922, 80.233124);
+	  var mapOptions= {
+	    center:myCenter,
+	    zoom:16, scrollwheel: true, draggable: true,
+	    mapTypeId:google.maps.MapTypeId.ROADMAP
+	  };
+	  var map=new google.maps.Map(document.getElementById("googleMapExpanded"),mapOptions);
+
+	  var marker = new google.maps.Marker({
+	    position: myCenter,
+	  });
+	  marker.setMap(map);
+	}
+
+	</script>
+	
+<script src="https://maps.googleapis.com/maps/api/js?key= AIzaSyAFERONpztaAkd1VmVBFubeddYLhHxTmY8&callback=myMap"></script>
+
+</body>
+</html>
