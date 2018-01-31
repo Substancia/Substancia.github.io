@@ -1,1 +1,0 @@
-# Official NSS website of Indian Institute of Technology, Madras
