@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="gohome()">Go Back</button>
+
+<script language="javascript">
+    function gohome(){
+      if (typeof window.home == 'function'){
+        window.home();
+      } else if (document.all) {
+        window.location.href = "about:home";
+      } else {
+        document.write("<p>Please click on your browser's Home button.</p>");
+      }
+    }
+  </script>
+
+</body>
+</html>

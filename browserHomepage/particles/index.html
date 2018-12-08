@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>particles.js</title>
+  <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+  <meta name="author" content="Vincent Garreau" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" media="screen" href="demo/css/style.css">
+
+  <style>
+    .dropdown-content {
+      display: none;
+      position: absolute;
+    }
+    .dropdown {
+      position: absolute;
+      display: inline-block;
+/*      transition: transform 0.3s ease-in;*/
+    }
+    .dropdown-content a {
+    }
+/*    .dropdown:hover a {transform: translate(0,40px);}*/
+    .dropdown:hover .dropdown-content {display: block;}
+
+    .searchbar {
+    	position: absolute;
+    	margin-top: 100px;
+    	left: 12vw;
+    }
+    .search {
+    	width: 70vw;
+    	padding: 10px;
+    	font-size: 15px;
+/*		background-image: linear-gradient(to bottom right, #111, #444);*/
+    }
+    .searchbtn {
+    	font-size: 15px;
+    	height: 42px;
+    	margin-left: -3px;
+    	padding-bottom: 5px;
+    }
+
+	.tooltip {
+	  position: relative;
+	  display: inline-block;
+	  border-bottom: 1px dotted black;
+	}
+	.tooltip .tooltiptext {
+	  visibility: hidden;
+	  width: 150px;
+	  background-color: red; /* For browsers that do not support gradients */
+	  background-image: linear-gradient(to bottom right, #111, #444);
+	  color: #999;
+	  text-align: center;
+	  border-radius: 6px;
+	  padding: 5px 0;
+	  line-height: 20px;
+	  
+	  /* Position the tooltip */
+	  position: absolute;
+	  z-index: 1;
+	  top: 5px;
+	  height: 20px;
+	  right: 100%;
+	}
+	.tooltip:hover .tooltiptext {
+	  visibility: visible;
+	}
+
+	.col-md-3 {
+		text-align: center;
+	}
+
+	.favimg {
+		padding: 10px;
+		width: 20%;
+	}
+
+	.footer {
+		position: absolute;
+		bottom: 0;
+		width: 100vw;
+		text-align: center;
+		padding: 20px 0 20px 0;
+		background-color: grey; /* For browsers that do not support gradients */
+		background-image: linear-gradient(to bottom right, #777, #000);
+		color: white;
+	}
+
+  </style>
+</head>
+<body>
+
+<!-- count particles --><!--
+<div class="count-particles">
+  <span class="js-count-particles">--</span> particles
+</div>
+-->
+<!-- particles.js container -->
+<div id="particles-js">
+	<div class="dropdown">
+	    <a href="about:home"><img src="images/firefox_dark.png" id="lead-pic" style="width: 30px; padding: 5px;" onmouseover="hover(this);" onmouseout="unhover(this);"></a>
+	    <div class="dropdown-content">
+	    	<a href="https://www.google.com"><img src="images/chrome_dark.png" style="width: 30px; padding: 5px;" onmouseover="hover(this);" onmouseout="unhover(this);"></a>
+	    	<a href="https://www.yahoo.com"><img src="images/yahoo_dark.png" style="width: 30px; padding: 5px;" onmouseover="hover(this);" onmouseout="unhover(this);"></a>
+	    </div>
+	</div>
+
+	<div class="dropdown" style="right: 0px;">
+	    <a href="https://gmail.com"><img src="images/gmail_dark.png" id="lead-pic" style="width: 30px; padding: 5px;" onmouseover="hover(this);" onmouseout="unhover(this);"></a>
+	    <div class="dropdown-content">
+	    	<a href="https://mail.google.com/mail/u/0/" class="tooltip"><img src="images/gmail0.png" style="width: 30px; padding: 5px;"><span class="tooltiptext">Sentienta Sins</span></a>
+	    	<a href="https://mail.google.com/mail/u/1/" class="tooltip"><img src="images/gmail1.png" style="width: 30px; padding: 5px;"><span class="tooltiptext">Mohammad Jibin</span></a>
+	    	<a href="https://mail.google.com/mail/u/2/" class="tooltip"><img src="images/gmail2.png" style="width: 30px; padding: 5px;"><span class="tooltiptext">Sentienta Sins</span></a>
+	    </div>
+	</div>
+
+	<div class="dropdown" style="right: 40px;">
+	    <a href="https://drive.google.com"><img src="images/drive_dark.png" id="lead-pic" style="width: 30px; padding: 5px;" onmouseover="hover(this);" onmouseout="unhover(this);"></a>
+	    <div class="dropdown-content">
+	    	<a href="https://drive.google.com/drive/u/0/my-drive" class="tooltip"><img src="images/gmail0.png" style="width: 30px; padding: 5px;"><span class="tooltiptext">Sentienta Sins</span></a>
+	    	<a href="https://drive.google.com/drive/u/1/my-drive" class="tooltip"><img src="images/gmail1.png" style="width: 30px; padding: 5px;"><span class="tooltiptext">Mohammad Jibin</span></a>
+	    	<a href="https://drive.google.com/drive/u/2/my-drive" class="tooltip"><img src="images/gmail2.png" style="width: 30px; padding: 5px;"><span class="tooltiptext">Sentienta Sins</span></a>
+	    </div>
+	</div>
+
+	<div class="searchbar" style="display: inline; float: left;">
+		<input type="text" name="search" id="search" class="search" placeholder="Search">
+		<button class="searchbtn" onclick="search();">▶</button>
+	</div>
+
+	<div class="favourites" style="position: absolute; top: 35vh; width: 40vw; left: 30vw;">
+		<div style="float: left;">
+			<span><a href="https://www.github.com"><img src="images/github.png" class="favimg"></a></span>
+			<span><a href="https://www.youtube.com"><img src="images/youtube.png" class="favimg"></a></span>
+			<span><a href="https://www.web.whatsapp.com"><img src="images/whatsapp.png" class="favimg"></a></span>
+			<span><a href="https://www.docs.google.com"><img src="images/docs.png" class="favimg"></a></span>
+		</div>
+		<div style="float: left;">
+			<span><a href="https://nptel.iitm.ac.in"><img src="images/nptel.png" class="favimg"></a></span>
+			<span><a href="https://courses.iitm.ac.in"><img src="images/moodle.png" class="favimg"></a></span>
+			<span><a href="https://www.facebook.com"><img src="images/facebook.png" class="favimg"></a></span>
+			<span><a href="https://www.messenger.com"><img src="images/messenger.png" class="favimg"></a></span>
+		</div>
+	</div>
+
+	<div class="footer">
+		<h2>Particle.js incorporated MyBrowserHomePage. Final project of ©2018. By <a href="https://substancia.github.io">Sentienta Sins</a>.</h2>
+	</div>
+
+</div>
+
+<!-- scripts -->
+<script src="particles.js"></script>
+<script src="demo/js/app.js"></script>
+
+<!-- stats.js -->
+<!-- <script src="js/lib/stats.js"></script> -->
+<script>								//particle.js script
+  var count_particles, stats, update;
+  stats = new Stats;
+  stats.setMode(0);
+  stats.domElement.style.position = 'absolute';
+  stats.domElement.style.left = '0px';
+  stats.domElement.style.top = '0px';
+  document.body.appendChild(stats.domElement);
+  count_particles = document.querySelector('.js-count-particles');
+  update = function() {
+    stats.begin();
+    stats.end();
+    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+    }
+    requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+</script>
+<script type="text/javascript">			//lead pic swap
+	function hover(element) {
+		var tmp = element.getAttribute('src');
+		tmp = tmp.replace('dark','normal');
+		element.setAttribute('src',tmp);
+	}
+	function unhover(element) {
+		var tmp = element.getAttribute('src');
+		tmp = tmp.replace('normal','dark');
+		element.setAttribute('src',tmp);
+	}
+</script>
+<script type="text/javascript">			//search
+	function search() {
+		var tmp = document.getElementById('search').value;
+		if (tmp.search('https://') > -1) tmp = tmp.replace('https://','');
+		if (tmp.search('http://') > -1) tmp = tmp.replace('http://','');
+		window.location = "http://" + tmp;
+	}
+</script>
+
+</body>
+</html>
