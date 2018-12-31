@@ -70,6 +70,8 @@ body {
 
 .mySlides {
   display: none;
+  text-align: center;
+  background-color: #111;
 }
 
 .cursor {
@@ -128,6 +130,10 @@ img {
 
 .demo {
   opacity: 0.6;
+  object-fit: cover;
+  height: 168.75px;
+  width: 300px;
+  overflow: hidden;
 }
 
 .active,
@@ -136,7 +142,11 @@ img {
 }
 
 img.hover-shadow {
-  transition: 0.3s
+  transition: 0.3s;
+  object-fit: cover;
+  height: 168.75px;
+  width: 300px;
+  overflow: hidden;
 }
 
 .hover-shadow:hover {
@@ -215,97 +225,97 @@ Rock beach, Pondicherry, is located at <a href="https://www.google.com/maps/plac
 
     <div class="mySlides">
       <div class="numbertext">1 / 19</div>
-      <img src="IMG_20180407_225356472.jpg" style="width:100%">
+      <img src="IMG_20180407_225356472.jpg" style="height:100vh;">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">2 / 19</div>
-      <img src="IMG_20180407_225405004.jpg" style="width:100%">
+      <img src="IMG_20180407_225405004.jpg" style="height:100vh;">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">3 / 19</div>
-      <img src="IMG_20180407_225430711.jpg" style="width:100%">
+      <img src="IMG_20180407_225430711.jpg" style="height:100vh;">
     </div>
     
     <div class="mySlides">
       <div class="numbertext">4 / 19</div>
-      <img src="IMG_20180408_054438307.jpg" style="width:100%">
+      <img src="IMG_20180408_054438307.jpg" style="height:100vh;">
     </div>
     
     <div class="mySlides">
       <div class="numbertext">5 / 19</div>
-      <img src="IMG_20180408_054931637.jpg" style="width:100%">
+      <img src="IMG_20180408_054931637.jpg" style="height:100vh;">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">6 / 19</div>
-      <img src="IMG_20180408_060522850.jpg" style="width:100%">
+      <img src="IMG_20180408_060522850.jpg" style="height:100vh;">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">7 / 19</div>
-      <img src="IMG_20180408_060530328.jpg" style="width:100%">
+      <img src="IMG_20180408_060530328.jpg" style="height:100vh;">
     </div>
     
     <div class="mySlides">
       <div class="numbertext">8 / 19</div>
-      <img src="IMG_20180408_061311158.jpg" style="width:100%">
+      <img src="IMG_20180408_061311158.jpg" style="height:100vh;">
     </div>
     
     <div class="mySlides">
       <div class="numbertext">9 / 19</div>
-      <img src="IMG_20180408_061758552.jpg" style="width:100%">
+      <img src="IMG_20180408_061758552.jpg" style="height:100vh;">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">10 / 19</div>
-      <img src="IMG_20180408_063614832.jpg" style="width:100%">
+      <img src="IMG_20180408_063614832.jpg" style="height:100vh;">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">11 / 19</div>
-      <img src="IMG_20180408_064447394.jpg" style="width:100%">
+      <img src="IMG_20180408_064447394.jpg" style="height:100vh;">
     </div>
     
     <div class="mySlides">
       <div class="numbertext">12 / 19</div>
-      <img src="IMG_20180408_070556968.jpg" style="width:100%">
+      <img src="IMG_20180408_070556968.jpg" style="height:100vh;">
     </div>
     
     <div class="mySlides">
       <div class="numbertext">13 / 19</div>
-      <img src="IMG_20180408_084451766.jpg" style="width:100%">
+      <img src="IMG_20180408_084451766.jpg" style="height:100vh;">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">14 / 19</div>
-      <img src="IMG_20180408_084524107.jpg" style="width:100%">
+      <img src="IMG_20180408_084524107.jpg" style="height:100vh;">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">15 / 19</div>
-      <img src="IMG_20180408_084611258.jpg" style="width:100%">
+      <img src="IMG_20180408_084611258.jpg" style="height:100vh;">
     </div>
     
     <div class="mySlides">
       <div class="numbertext">16 / 19</div>
-      <img src="IMG_20180408_084759654.jpg" style="width:100%">
+      <img src="IMG_20180408_084759654.jpg" style="height:100vh;">
     </div>
     
     <div class="mySlides">
       <div class="numbertext">17 / 19</div>
-      <img src="IMG_20180408_093322564.jpg" style="width:100%">
+      <img src="IMG_20180408_093322564.jpg" style="height:100vh;">
     </div>
     
     <div class="mySlides">
       <div class="numbertext">18 / 19</div>
-      <img src="IMG_20180408_093430078.jpg" style="width:100%">
+      <img src="IMG_20180408_093430078.jpg" style="height:100vh;">
     </div>
     
     <div class="mySlides">
       <div class="numbertext">19 / 19</div>
-      <img src="IMG_20180408_102529285.jpg" style="width:100%">
+      <img src="IMG_20180408_102529285.jpg" style="height:100vh;">
     </div>
     
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -317,61 +327,61 @@ Rock beach, Pondicherry, is located at <a href="https://www.google.com/maps/plac
 
 
   <div class="column">
-    <img src="IMG_20180407_225356472.jpg" style="width:100%" onclick="currentSlide(1)" class="demo cursor" alt="Pier, ze noit">
+    <img src="IMG_20180407_225356472.jpg" onclick="currentSlide(1)" class="demo cursor" alt="Pier, ze noit">
   </div>
   <div class="column">
-    <img src="IMG_20180407_225405004.jpg" style="width:100%" onclick="currentSlide(2)" class="demo cursor" alt="Pier, ze noit">
+    <img src="IMG_20180407_225405004.jpg" onclick="currentSlide(2)" class="demo cursor" alt="Pier, ze noit">
   </div>
   <div class="column">
-    <img src="IMG_20180407_225430711.jpg" style="width:100%" onclick="currentSlide(3)" class="demo cursor" alt="Pier, ze noit">
+    <img src="IMG_20180407_225430711.jpg" onclick="currentSlide(3)" class="demo cursor" alt="Pier, ze noit">
   </div>
   <div class="column">
-    <img src="IMG_20180408_054438307.jpg" style="width:100%" onclick="currentSlide(4)" class="demo cursor" alt="Pier, ze morgan and the sun">
+    <img src="IMG_20180408_054438307.jpg" onclick="currentSlide(4)" class="demo cursor" alt="Pier, ze morgan and the sun">
   </div>
   <div class="column">
-    <img src="IMG_20180408_054931637.jpg" style="width:100%" onclick="currentSlide(5)" class="demo cursor" alt="Dat me">
+    <img src="IMG_20180408_054931637.jpg" onclick="currentSlide(5)" class="demo cursor" alt="Dat me">
   </div>
   <div class="column">
-    <img src="IMG_20180408_060522850.jpg" style="width:100%" onclick="currentSlide(6)" class="demo cursor" alt="Wakey wakey">
+    <img src="IMG_20180408_060522850.jpg" onclick="currentSlide(6)" class="demo cursor" alt="Wakey wakey">
   </div>
   <div class="column">
-    <img src="IMG_20180408_060530328.jpg" style="width:100%" onclick="currentSlide(7)" class="demo cursor" alt="Breakfast is served">
+    <img src="IMG_20180408_060530328.jpg" onclick="currentSlide(7)" class="demo cursor" alt="Breakfast is served">
   </div>
   <div class="column">
-    <img src="IMG_20180408_061311158.jpg" style="width:100%" onclick="currentSlide(8)" class="demo cursor" alt="The cloud kiss">
+    <img src="IMG_20180408_061311158.jpg" onclick="currentSlide(8)" class="demo cursor" alt="The cloud kiss">
   </div>
   <div class="column">
-    <img src="IMG_20180408_061758552.jpg" style="width:100%" onclick="currentSlide(9)" class="demo cursor" alt="The quick peep">
+    <img src="IMG_20180408_061758552.jpg" onclick="currentSlide(9)" class="demo cursor" alt="The quick peep">
   </div>
   <div class="column">
-    <img src="IMG_20180408_063614832.jpg" style="width:100%" onclick="currentSlide(10)" class="demo cursor" alt="Sea sure is watery...">
+    <img src="IMG_20180408_063614832.jpg" onclick="currentSlide(10)" class="demo cursor" alt="Sea sure is watery...">
   </div>
   <div class="column">
-    <img src="IMG_20180408_064447394.jpg" style="width:100%" onclick="currentSlide(11)" class="demo cursor" alt="First boat brings us this">
+    <img src="IMG_20180408_064447394.jpg" onclick="currentSlide(11)" class="demo cursor" alt="First boat brings us this">
   </div>
   <div class="column">
-    <img src="IMG_20180408_070556968.jpg" style="width:100%" onclick="currentSlide(12)" class="demo cursor" alt="Tempting infrastructure">
+    <img src="IMG_20180408_070556968.jpg" onclick="currentSlide(12)" class="demo cursor" alt="Tempting infrastructure">
   </div>
   <div class="column">
-    <img src="IMG_20180408_084451766.jpg" style="width:100%" onclick="currentSlide(13)" class="demo cursor" alt="Weird snake lady">
+    <img src="IMG_20180408_084451766.jpg" onclick="currentSlide(13)" class="demo cursor" alt="Weird snake lady">
   </div>
   <div class="column">
-    <img src="IMG_20180408_084524107.jpg" style="width:100%" onclick="currentSlide(14)" class="demo cursor" alt="Weird pork lady">
+    <img src="IMG_20180408_084524107.jpg" onclick="currentSlide(14)" class="demo cursor" alt="Weird pork lady">
   </div>
   <div class="column">
-    <img src="IMG_20180408_084611258.jpg" style="width:100%" onclick="currentSlide(15)" class="demo cursor" alt="Daaaaaamn that's violent">
+    <img src="IMG_20180408_084611258.jpg" onclick="currentSlide(15)" class="demo cursor" alt="Daaaaaamn that's violent">
   </div>
   <div class="column">
-    <img src="IMG_20180408_084759654.jpg" style="width:100%" onclick="currentSlide(16)" class="demo cursor" alt="Snake lady version 2">
+    <img src="IMG_20180408_084759654.jpg" onclick="currentSlide(16)" class="demo cursor" alt="Snake lady version 2">
   </div>
   <div class="column">
-    <img src="IMG_20180408_093322564.jpg" style="width:100%" onclick="currentSlide(17)" class="demo cursor" alt="Auroville">
+    <img src="IMG_20180408_093322564.jpg" onclick="currentSlide(17)" class="demo cursor" alt="Auroville">
   </div>
   <div class="column">
-    <img src="IMG_20180408_093430078.jpg" style="width:100%" onclick="currentSlide(18)" class="demo cursor" alt="Okay...">
+    <img src="IMG_20180408_093430078.jpg" onclick="currentSlide(18)" class="demo cursor" alt="Okay...">
   </div>
   <div class="column">
-    <img src="IMG_20180408_102529285.jpg" style="width:100%" onclick="currentSlide(19)" class="demo cursor" alt="Mathrimandir, the tourist attraction">
+    <img src="IMG_20180408_102529285.jpg" onclick="currentSlide(19)" class="demo cursor" alt="Mathrimandir, the tourist attraction">
   </div>
   </div>
 </div>
