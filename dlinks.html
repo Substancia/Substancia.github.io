@@ -24,5 +24,18 @@
 <!-- 	<div style="display: none;"> -->
 	<iframe src="http://substancia.byethost7.com/getval.php" height="200" width="300"></iframe>
 <!-- 	</div> -->
+<script type="text/javascript">
+	function myFunction() {
+	    $.ajax({
+	        url: 'http://substancia.byethost7.com/addval.php',
+	        type: 'POST',
+	        data: {
+	        },
+	        success: function(msg) {
+	            alert('Email Sent');
+	        }               
+	    });
+	}
+</script>
 </body>
 </html>
