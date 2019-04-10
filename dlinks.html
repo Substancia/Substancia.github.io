@@ -10,6 +10,7 @@
 
 	  gtag('config', 'UA-138108249-1');
 	</script>
+	<script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
 	<title>My Drive Links</title>
 </head>
 <body onload="myFunction()">
@@ -21,21 +22,33 @@
 	Softwares: <a href="https://drive.google.com/open?id=1jNPFmuF7kjEgLCmSViEBlHcuKayrgpMT">https://drive.google.com/open?id=1jNPFmuF7kjEgLCmSViEBlHcuKayrgpMT</a><br>
 	TV Series: <a href="https://drive.google.com/open?id=1Tru3CI7ztKiCbMCIOVyEh-KYl8JBlbsf">https://drive.google.com/open?id=1Tru3CI7ztKiCbMCIOVyEh-KYl8JBlbsf</a><br>
 
+	<div id="result"></div>
 <!-- 	<div style="display: none;"> -->
-	<iframe src="http://substancia.byethost7.com/getval.php" height="200" width="300"></iframe>
+<!-- 	<iframe src="http://substancia.byethost7.com/getval.php" height="200" width="300"></iframe> -->
 <!-- 	</div> -->
 <script type="text/javascript">
-	function myFunction() {
-	    $.ajax({
-	        url: 'http://substancia.byethost7.com/addval.php',
-	        type: 'POST',
-	        data: {
-	        },
-	        success: function(msg) {
-	            alert('Email Sent');
-	        }               
-	    });
-	}
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script>
+    	window.onload = function() {
+    		$( "#result" ).load( "http://substancia.byethost7.com/addval.php" );
+        	alert("Page loading completed");
+    	}
+      // $(function () {
+
+      //   function myFunction() {
+
+      //     $.ajax({
+      //       type: 'post',
+      //       url: 'http://substancia.byethost7.com/addval.php',
+      //       success: function () {
+      //         alert('form was submitted');
+      //       }
+      //     });
+
+      //   }
+
+      // });
+    </script>
 </script>
 </body>
 </html>
