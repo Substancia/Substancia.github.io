@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138108249-1"></script>
   <script>
@@ -8,6 +9,30 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-138108249-1');
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function () {
+    // Listen to submit event on the <form> itself!
+    $('#gform').submit(function (e) {
+
+      e.preventDefault();
+
+      var name = $("#name").val();
+      var email = $("#email").val();
+      var message = $("#message").val();
+
+      $.post("https://script.google.com/macros/s/AKfycbxXuPdDnl_PSNRZNt9gym0vVzB7KNf5YGMqriO9DA/exec", {
+        name: name,
+        email: email,
+        message: message
+      },
+      function(data,status){
+        $('#gform').hide();
+        $('.thankyou_message').show();
+      });
+    });
+  });
   </script>
 <title>This is me</title>
 <meta charset="UTF-8">
@@ -79,6 +104,7 @@ body, html {
 }
 
 </style>
+</head>
 <body style="transition: .5s ease;" id="page" onload="myFunction()">
 
 <!-- Navbar (sit on top) -->
@@ -316,7 +342,7 @@ body, html {
         <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: sentientasins@gmail.com<br>
       </div>
       <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
-      <form action="https://script.google.com/macros/s/AKfycbyOH2ZsjsLyvs0Pq1v-aZvcxoyLCXO3gQIZ5FA_Xzt_JO1QB7c/exec" method="POST" id="gform">
+      <form method="POST" id="gform">
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
           <div class="w3-half">
             <input class="w3-input w3-border" type="text" placeholder="Name" required name="name" id="name">
@@ -336,7 +362,7 @@ body, html {
 	</div>
 
 	  <!-- Customise the Thankyou Message People See when they submit the form: -->
-      <div style="display:none;" id="thankyou_message">
+      <div style="display:none;" class="thankyou_message">
       <h2><em>Thanks</em> for your submission!
         I'll contact you soon!</h2>
       </div>
@@ -363,11 +389,6 @@ body, html {
   <h3>Thank you for visiting!</h3>
 </footer>
  
-  <!-- Submit the Form to Google Using "AJAX" -->
-  <script data-cfasync="false" type="text/javascript"
-  src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
-
-  <!-- Add Google Maps -->
 <script>
 var myVar;
 
@@ -428,7 +449,13 @@ function toggleFunction() {
     }
 }
 </script>
+
+  <!-- Add Google Maps -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-Q0JQNZsbXg6e7PSIGjHbFaOVfyJ9Vkg&callback=myMap"></script>
+
+  <!-- Submit the Form to Google Using "AJAX" -->
+<!--   <script data-cfasync="false" type="text/javascript"
+  src="form-submission-handler.js"></script> -->
 
 </body>
 </html>
