@@ -7,6 +7,34 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+		// Listen to submit event on the <form> itself!
+			$('#contact').submit(function (e) {
+
+			  e.preventDefault();
+
+			  var name = $("#name").val();
+			  var email = $("#email").val();
+			  var message = $("#message").val();
+			  var phone = $("#phone").val();
+			  var website = $("#website").val();
+
+			  $.post("https://script.google.com/macros/s/AKfycbwLEpOxeOht79yFSKRL_pBMNZ1wJwFAR593V6Ec/exec", {
+			    name: name,
+			    email: email,
+			    message: message,
+			    phone: phone,
+			    website: website
+			  },
+			  function(data,status){
+			    $('#contact').hide();
+			    $('.thankyou_message').show();
+			  });
+			});
+		});
+	</script>
 	<title>Contact - Saints</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<style type="text/css">
@@ -152,10 +180,6 @@
 		  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
 		}
 
-		.copyright {
-		  text-align: center;
-		}
-
 		#contact input:focus,
 		#contact textarea:focus {
 		  outline: 0;
@@ -177,10 +201,38 @@
 		:-ms-input-placeholder {
 		  color: #888;
 		}
+
+		.overlay {
+		  transition: .5s ease;
+		  position: fixed;
+		  top: 50%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+		  width: 70vw;
+		}
+
+		#overlayText {
+			background-color: #000;
+			padding: 10px;
+			transition: .5s ease;
+			display: none;
+		}
+
+		.w3-wide {
+			letter-spacing: 10px;
+			font-size: 25px;
+			text-align: center;
+		}
+		.w3-hover-opacity {cursor: pointer;}
+
+		#page {
+			transition: .5s ease;
+		}
+
 	</style>
 </head>
 
-<body class="page-template-default page page-id-464 group-blog has-header-image page-one-column colors-dark" tcap-name="mainman">
+<body class="page-template-default page page-id-464 group-blog has-header-image page-one-column colors-dark" tcap-name="mainman" id="page">
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 		<header id="masthead" class="site-header" role="banner">
@@ -246,28 +298,37 @@
 									  <div class="col-sm-6">
 									  	<center>
 											<div class="container">  
-											  <form id="contact" action="" method="post">
+											  <form id="contact" method="post">
 											    <h3>Notify us!</h3>
 											    <h4>We are responsive to mails and other methods too!</h4>
 											    <fieldset>
-											      <input placeholder="Your name" type="text" tabindex="1" required>
+											      <input placeholder="Your name" type="text" tabindex="1" id="name" required>
 											    </fieldset>
 											    <fieldset>
-											      <input placeholder="Your Email Address" type="email" tabindex="2" required>
+											      <input placeholder="Your Email Address" type="email" tabindex="2" id="email" required>
 											    </fieldset>
 											    <fieldset>
-											      <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
+											      <input placeholder="Your Phone Number" type="tel" tabindex="3"
+											      id="phone" required>
 											    </fieldset>
 											    <fieldset>
-											      <input placeholder="Your Web Site (optional)" type="url" tabindex="4">
+											      <input placeholder="Your Web Site (optional)" type="url" tabindex="4" id="website">
 											    </fieldset>
 											    <fieldset>
-											      <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+											      <textarea placeholder="Type your message here...." tabindex="5" id="message" required></textarea>
 											    </fieldset>
 											    <fieldset>
-											      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+											      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" onClick="sendOverlay()" tabindex="6">Submit</button>
 											    </fieldset>
 											  </form>
+											    <div class="overlay" id="overlay">
+													<div class="w3-center w3-padding-large w3-black w3-xlarge w3-wide" id="overlayText">Submitting your response . . .</div>
+												</div>
+												<!-- Customise the Thankyou Message People See when they submit the form: -->
+											    <div style="display:none;" class="thankyou_message">
+											      <h2><em>Thanks</em> for your submission!
+											        We'll contact you soon!</h2>
+											    </div>
 											</div>
 										</center>
 									  </div>
@@ -296,7 +357,23 @@
 		</div><!-- .site-content-contain -->
 	</div><!-- #page -->
 
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script>
+	var myVar;
+
+	function sendOverlay() {
+		document.getElementById("page").style.opacity = 0.3;
+		document.getElementById("overlayText").style.display = "block";
+	    myVar = setTimeout(showPage, 2000);
+	}
+
+	function showPage() {
+	  document.getElementById("page").style.opacity = 1;
+	  document.getElementById("overlay").style.opacity = 0;
+	  document.getElementById("overlayText").style.display = "none";
+	}
+	</script>
+
+<!-- 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
