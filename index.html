@@ -1,467 +1,555 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138108249-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'UA-138108249-1');
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script>
-  $(document).ready(function () {
-    // Listen to submit event on the <form> itself!
-    $('#gform').submit(function (e) {
+    $(document).ready(function () {
+      // Listen to submit event on the <form> itself!
+      $('#gform').submit(function (e) {
 
-      e.preventDefault();
+        e.preventDefault();
 
-      var name = $("#name").val();
-      var email = $("#email").val();
-      var message = $("#message").val();
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var message = $("#message").val();
 
-      $.post("https://script.google.com/macros/s/AKfycbxXuPdDnl_PSNRZNt9gym0vVzB7KNf5YGMqriO9DA/exec", {
-        name: name,
-        email: email,
-        message: message
-      },
-      function(data,status){
-        $('#gform').hide();
-        $('.thankyou_message').show();
+        $.post("https://script.google.com/macros/s/AKfycbxXuPdDnl_PSNRZNt9gym0vVzB7KNf5YGMqriO9DA/exec", {
+          name: name,
+          email: email,
+          message: message
+        },
+          function (data, status) {
+            $('#gform').hide();
+            $('.thankyou_message').show();
+          });
       });
     });
-  });
   </script>
-<title>This is me</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" type="image/x-icon" href="mjlogo.jpg"/>
-<link rel="stylesheet" href="me3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
-   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-body, html {
-    height: 100%;
-    color: #777;
-    line-height: 1.8;
-}
-
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* First image (Logo. Full height) */
-.bgimg-1 {
-    background-image: url('jibn.jpg');
-    min-height: 100%;
-}
-
-/* Second image (Portfolio) */
-.bgimg-2 {
-    background-image: url("chopsticks.jpg");
-    min-height: 400px;
-}
-
-/* Third image (Contact) */
-.bgimg-3 {
-    background-image: url("meontop.jpg");
-    min-height: 400px;
-}
-
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3 {
-        background-attachment: scroll;
+  <title>This is me</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="mjlogo.jpg" />
+  <link rel="stylesheet" href="me3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Lato", sans-serif;
     }
-}
 
-.overlay {
-  transition: .5s ease;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+    body,
+    html {
+      height: 100%;
+      color: #777;
+      line-height: 1.8;
+    }
 
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+    /* Create a Parallax Effect */
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
 
-</style>
+    /* First image (Logo. Full height) */
+    .bgimg-1 {
+      background-image: url('jibn.jpg');
+      min-height: 100%;
+    }
+
+    /* Second image (Portfolio) */
+    .bgimg-2 {
+      background-image: url("chopsticks.jpg");
+      min-height: 400px;
+    }
+
+    /* Third image (Contact) */
+    .bgimg-3 {
+      background-image: url("meontop.jpg");
+      min-height: 400px;
+    }
+
+    .w3-wide {
+      letter-spacing: 10px;
+    }
+
+    .w3-hover-opacity {
+      cursor: pointer;
+    }
+
+    /* Turn off parallax scrolling for tablets and phones */
+    @media only screen and (max-device-width: 1024px) {
+
+      .bgimg-1,
+      .bgimg-2,
+      .bgimg-3 {
+        background-attachment: scroll;
+      }
+    }
+
+    .overlay {
+      transition: .5s ease;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
 </head>
+
 <body style="transition: .5s ease;" id="page" onload="myFunction()">
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="#home" class="w3-bar-item w3-button">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-  </div>
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);"
+        onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="#home" class="w3-bar-item w3-button">HOME</a>
+      <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+      <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
-    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+      <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+      <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+      <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    </div>
   </div>
-</div>
   <div style="position: absolute; right: 0; z-index: 100;">
-  	(Last updated on: December 31, 2018)
+    (Last updated on: July 9, 2020)
   </div>
 
-<!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">I'M <span class="w3-hide-small">RIGHT</span> HERE</span>
-  </div>
-</div>
-
-<!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">ABOUT ME</h3>
-  <p class="w3-center"><em>I love anime and food</em></p>
-  <p>Anime is life, there's no arguing about that with me. I love dancing. And I'd die for food (pun intended, but true). I love travelling to new places
-  and trying out new food. If you know this much about me, you know me too well. I'm a "late to bed, late to rise". Like, real late. Though I have already started decaffeinating my body, my sleep cycle hasn't come back to normal yet. The world has so much to offer, so I plan to try out everything. And I don't bite people, so you can call 
-  me friendly. Oh, and I'm single, in case you're wondering.
-  </p>
-  <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fa fa-user w3-margin-right"></i>Mohammad Jibin</b></p><br>
-      <img src="me2.0.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
-    </div>
-
-    <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p>Welcome to my website. I am currently a third year student at IIT Madras, pursuing integrated Bachelor and Master of Science in Physics. Born and brought up in Kerala, I've been in Chennai since I started my acaemic career in IITM.
-	  I'm still not a pro in the field of website development, but the dedication I show to assigned work helps me complete it with satisfaction on both sides.
-	  I'm more of a finish-it-today kind of person. And I work during nights, so I end up sleepless when I'm home as my family wakes up when I'm about to sleep. 
-	  <br><br>I lack recognition in WebDev. But thanks to Google, I can acquire knowledge required for the project myself very quickly and submit the project with elegance. 
-	  My previous works should support this statement, I hope. 
-	  <br><br>Outside this digital world, I've worked on a project on "Non-destructive tesing of fruit ripeness" in optics. A month long work on this summer 
-	  project has provided me experience in Electronics assembly, Arduino programming, Android app development, PCB printing and 3D printing.
-	  <br><br>I'm ready to take on any task in any of the fields mentioned above, unless I'm busy with more than two projects at a time or my semester exams 
-	  are going on. And I will submit satisfactory result.
-	  </p>
+  <!-- First Parallax Image with Logo Text -->
+  <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+      <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">I'M <span
+          class="w3-hide-small">RIGHT</span> HERE</span>
     </div>
   </div>
-  <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
-  <p class="w3-wide"><i class="fa fa-map-marker"></i>Going places</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
-  </div>
-  <p class="w3-wide"><i class="fa fa-laptop"></i>Web Design</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
-  </div>
-  <p class="w3-wide"><i class="fa fa-microchip"></i>Arduino programming</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:95%">95%</div>
-  </div>
-  <p class="w3-wide"><i class="fa fa-android"></i>Android app development</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:80%">80%</div>
-  </div>
-  <p class="w3-wide"><i class="fa fa-music"></i>Dancing</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
-  </div>
-  <p class="w3-wide"><i class="fa fa-code"></i>Scripting</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
-  </div>
-</div>
 
-<!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+  <!-- Container (About Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="about">
+    <h3 class="w3-center">ABOUT ME</h3>
+    <p class="w3-center"><em>Athlete, Web developer, Psychology minor, Forensic enthusiast, Biophysics researcher</em>
+    </p>
+    <p><b>Ultimate Frisbee</b> is a sport I owe everything to, and it defines who I am. The sport has turned my weak
+      self into a full-fledged <b>athlete, fitness trainer, coach</b>. On career side, I am a <b>web developer</b>
+      currently specializing in <b>React</b>. Majorly working on frontend, I have worked with multiple platforms and
+      frameworks,and I do extend to necessary backend services. Because of my interest and for a pre-requisite for my
+      future career interest in <b>Forensic Ballistics</b>, I have taken a minor in <b>Psychology</b>. Academically
+      speaking, I am a <b>Biophysics researcher</b>. <b>Dance enthusiast</b>, <b>traveller</b>, <b>music/concert
+        lover</b>, <b>eventual lazy slob</b> also describe me from time to time.
+    </p>
+    <div class="w3-row">
+      <div class="w3-col m6 w3-center w3-padding-large">
+        <p><b><i class="fa fa-user w3-margin-right"></i>Mohammad Jibin</b></p><br>
+        <img src="me2.0.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500"
+          height="333">
+      </div>
+
+      <!-- Hide this text on small devices -->
+      <div class="w3-col m6 w3-hide-small w3-padding-large">
+        <p>Welcome to my website. I am currently a final year student in IIT Madras, pursuing integrated Bachelor and
+          Master of Science in Physics. Born and brought up in Kerala, I've been in Chennai since I started my academic
+          career in IITM.<br />
+          Constantly updating myself with new trends in the field of website development and specializing in them, the
+          dedication I show to assigned work helps me
+          complete it with satisfaction on both sides.
+          <br><br>I am a precision artist; I hate those unnecessary variables and newlines, call it my OCD. I prefer
+          learning on the way over remembering prototypes. Thanks to Google, I can acquire knowledge required for the
+          project myself very quickly and submit any project with elegance. My previous works should support this
+          statement, I hope.
+          <br><br>Outside this digital world, I've worked on multiple projects including "Non-destructive tesing of
+          fruit ripeness" in optics. A year long work on this "summer" project has provided me experience in Electronics
+          assembly, Arduino programming, Android app development, PCB printing and 3D printing.
+          <br><br>I'm ready to take on any task in any of the fields mentioned above, unless I'm busy with more than two
+          projects at a time or my semester exams are going on. And I will submit satisfactory result.
+        </p>
+      </div>
+    </div>
+    <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
+    <p class="w3-wide"><i class="fa fa-male"></i>Athletics</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:95%">95%</div>
+    </div>
+    <p class="w3-wide"><i class="fa fa-map-marker"></i>Travelling</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+    </div>
+    <p class="w3-wide"><i class="fa fa-laptop"></i>Web Designing</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+    </div>
+    <p class="w3-wide"><i class="fa fa-microchip"></i>Arduino programming</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:95%">95%</div>
+    </div>
+    <p class="w3-wide"><i class="fa fa-android"></i>Android app development</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:80%">80%</div>
+    </div>
+    <p class="w3-wide"><i class="fa fa-music"></i>Dancing</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+    </div>
+    <p class="w3-wide"><i class="fa fa-code"></i>Scripting</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+    </div>
   </div>
-</div>
 
-<!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center">MY WORK</h3>
-  <p class="w3-center"><em>Here are my latest works.<br> Click on the images to visit the websites.</em></p><br>
+  <!-- Second Parallax Image with Portfolio Text -->
+  <div class="bgimg-2 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+    </div>
+  </div>
 
-  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div class="w3-row-padding w3-center">
-<!--
+  <!-- Container (Portfolio Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="portfolio">
+    <h3 class="w3-center">MY WORK</h3>
+    <p class="w3-center"><em>Here are my major works.<br> Click on the images to visit the websites.</em></p><br>
+
+    <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+    <div class="w3-row-padding w3-center">
+      <!--
     <div class="w3-col m3">
 	  NSS website IITM
       <div style="position: relative;"><img src="projectimages/nssweb.png" style="width:100%; opacity: 0.5;" alt="NSS IITM"><div class="centered">Temporarily removed</div></div>
     </div>
 -->
-    <div class="w3-col m3">
-	  NSS website IITM
-      <a href="https://substancia.github.io/nss"><img src="projectimages/nssweb.png" style="width:100%" class="w3-hover-opacity" alt="NSS IITM"></a>
-    </div>
+      <div class="w3-col m3">
+        NSS website IITM
+        <a href="https://substancia.github.io/nss"><img src="projectimages/nssweb.png" style="width:100%"
+            class="w3-hover-opacity project-images" alt="NSS IITM"></a>
+      </div>
 
-    <div class="w3-col m3">
-	  Podcast - Desi Outsiders
-      <a href="http://desioutsiders.com" target="_blank"><img src="projectimages/desweb.png" style="width:100%" class="w3-hover-opacity" alt="DesiOutsiers"></a>
-    </div>
+      <div class="w3-col m3">
+        Podcast - Desi Outsiders
+        <a href="http://desioutsiders.com" target="_blank"><img src="projectimages/desweb.png" style="width:100%"
+            class="w3-hover-opacity project-images" alt="DesiOutsiers"></a>
+      </div>
 
-    <div class="w3-col m3">
-	  Blogpage - Feminism India
-      <a href="http://feminismindia.com" target="_blank"><img src="projectimages/femweb.png" style="width:100%" class="w3-hover-opacity" alt="FeminismIndia"></a>
-    </div>
+      <div class="w3-col m3">
+        Blogpage - Feminism India
+        <a href="http://feminismindia.com" target="_blank"><img src="projectimages/femweb.png" style="width:100%"
+            class="w3-hover-opacity project-images" alt="FeminismIndia"></a>
+      </div>
 
-    <div class="w3-col m3">
-	  Business site - 4iiteens
-      <a href="http://4iiteens.com" target="_blank"><img src="projectimages/4iiteens.png" style="width:100%" class="w3-hover-opacity" alt="4iiteens"></a>
-    </div>
+      <div class="w3-col m3">
+        Business site - 4iiteens
+        <a href="http://4iiteens.com" target="_blank"><img src="projectimages/4iiteens.png" style="width:100%"
+            class="w3-hover-opacity project-images" alt="4iiteens"></a>
+      </div>
 
-    <div class="w3-col m3">
-	  Business site - Filmloop
-      <a href="http://filmloop.in" target="_blank"><img src="projectimages/filmloop.png" style="width:100%" class="w3-hover-opacity" alt="Filmloop"></a>
-    </div>
+      <div class="w3-col m3">
+        Business site - Filmloop
+        <a href="http://filmloop.in" target="_blank"><img src="projectimages/filmloop.png" style="width:100%"
+            class="w3-hover-opacity project-images" alt="Filmloop"></a>
+      </div>
 
-    <div class="w3-col m3">
-	  HSS department library IITM
-      <a href="http://students.iitm.ac.in/hsslib" target="_blank"><img src="projectimages/hsslib.png" style="width:100%" class="w3-hover-opacity" alt="hsslib"></a>
-    </div>
-<!--
+      <div class="w3-col m3">
+        HSS department library IITM
+        <a href="http://students.iitm.ac.in/hsslib" target="_blank"><img src="projectimages/hsslib.png"
+            style="width:100%" class="w3-hover-opacity project-images" alt="hsslib"></a>
+      </div>
+
+      <div class="w3-col m3">
+        Sports page - Saints IITM
+        <a href="http://substancia.github.io/Saints" target="_blank"><img src="projectimages/saints.png"
+            style="width:100%" class="w3-hover-opacity project-images" alt="Saints"></a>
+      </div>
+
+      <div class="w3-col m3">
+        Other Non-copyrighted works
+        <a href="https://github.com/Substancia?tab=repositories" target="_blank"><img
+            src="data:image/jpeg;base64,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"
+            style="width:100%" class="w3-hover-opacity project-images" alt="other"></a>
+      </div>
+      <!--
     <div class="w3-col m3">
       <img src="/w3images/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
     </div>-->
-  </div>
-  <center><h3>Waiting for more . . .</h3></center>
-
-  <br><br>
-  <div class="w3-row-padding w3-center w3-section">
-	<h3>Though I've been working on more hands-on projects . . .</h3>
-    <div class="w3-col m4"><div style="visibility:hidden">Hello</div>
-<!--      <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">-->
     </div>
+    <center>
+      <h3>Waiting for more . . .</h3>
+    </center>
 
-    <div class="w3-col m4">
-	  Non-destructive testing of fruit ripeness
-      <a href="https://hackaday.io/project/13422-wisci-wireless-spectrometer#menu-description" target="_blank"><img src="projectimages/specweb.png" style="width:100%" class="w3-hover-opacity" alt="Microspectrometer"></a>
-    </div>
-
-    <div class="w3-col m4"><div style="visibility:hidden">World</div>
-<!--      <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">-->
-    </div>
-<!--
-    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>	-->
-  </div>
-
-  <br><br>
-  <div class="w3-row-padding w3-center w3-section">
-	<h3>And a few internship research papers of mine . . .</h3>
-    <div class="w3-col m4"><div style="visibility:hidden">Hello</div>
-<!--      <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">-->
-    </div>
-
-    <div class="w3-col m4">
-	  Phase separation in Lipid Bilayer Vesicles under tension
-      <a href="http://reports.ias.ac.in/report/13794/phase-separation-in-lipid-bilayer-vesicles-under-tension" target="_blank"><img src="internships/rri/screenshot2.png" style="width:100%" class="w3-hover-opacity" alt="Phase separation in Lipid Bilayer Vesicles under tension"></a>
-    </div>
-
-    <div class="w3-col m4"><div style="visibility:hidden">World</div>
-<!--      <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">-->
-    </div>
-<!--
-    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>	-->
-  </div>
-
-  <br><br>
-  <h3 class="w3-center">MY EXPLOITS</h3>
-  <p class="w3-center"><em>Here is my latest exploit.<br> Click to visit Photo gallery.</em></p><br>
-
-  <div class="w3-row-padding w3-center w3-section">
-    <div class="w3-col m4">
-    A trip to Nagalapuram, Andhra Pradesh
-      <a href="expeditions/nagalapuram/index.html" target="_blank"><img src="expeditions/nagalapuram/IMG_20170909_112711.jpg" style="width:100%" class="w3-hover-opacity" alt="A trip to Nagalapuram"></a>
-    </div>
-
-    <div class="w3-col m4">
-    A trip to Pondicherry, Tamil Nadu
-      <a href="expeditions/pondicherry/index.html" target="_blank"><img src="expeditions/pondicherry/IMG_20180408_061311158.jpg" style="width:100%" class="w3-hover-opacity" alt="A trip to Pondicherry"></a>
-    </div>
-
-    <div class="w3-col m4">
-    A trip to Nandi hills, Karnataka
-      <a href="expeditions/nandi/index.html" target="_blank"><img src="expeditions/nandi/cover.png" style="width:100%" class="w3-hover-opacity" alt="A trip to Nandi hills"></a>
-    </div>
-
-    <div class="w3-col m4">
-    A trip to Ranipuram, Kerala
-      <a href="expeditions/ranipuram/index.html" target="_blank"><img src="expeditions/ranipuram/IMG_20181225_134238.jpg" style="width:100%" class="w3-hover-opacity" alt="A trip to Nandi hills"></a>
-    </div>
-
-</div>
-</div>
-
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
-
-<!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
-  </div>
-</div>
-
-<!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">WHERE I WORK</h3>
-  <p class="w3-center"><em>I'd love your feedback!</em></p>
-
-  <div class="w3-row w3-padding-32 w3-section">
-    <div class="w3-col m4 w3-container">
-      <!-- Add Google Maps -->
-      <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
-    </div>
-    <div class="w3-col m8 w3-panel">
-      <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> IIT Madras, Tamil Nadu, India<br>
-        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +91 7012810812<br>
-        <i class="fa fa-whatsapp fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> WhatsApp: +91 7012810812<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: sentientasins@gmail.com<br>
+    <br><br>
+    <div class="w3-row-padding w3-center w3-section">
+      <h3>Though I've been working on more hands-on projects . . .</h3>
+      <div class="w3-col m4">
+        Non-destructive testing of fruit ripeness<br /><br />
+        <a href="https://hackaday.io/project/13422-wisci-wireless-spectrometer#menu-description" target="_blank"><img
+            src="projectimages/specweb.png" style="width:100%; height: 165px; object-fit: cover;"
+            class="w3-hover-opacity" alt="Microspectrometer"></a>
       </div>
-      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
-      <form method="POST" id="gform">
-        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Name" required name="name" id="name">
-          </div>
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Email" required name="email" id="email">
-          </div>
+
+      <div class="w3-col m4">
+        Rheology in plant cells using Optical Tweezers
+        <img src="https://www.rochester.edu/newscenter/wp-content/uploads/2019/04/fea-optical-tweezers.jpg"
+          style="width:100%; height: 165px; object-fit: cover;" class="w3-hover-opacity" alt="Microspectrometer">
+      </div>
+      <!--
+    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>	-->
+    </div>
+
+    <br><br>
+    <div class="w3-row-padding w3-center w3-section">
+      <h3>And a few internship research papers of mine . . .</h3>
+      <div class="w3-col m4">
+        <div style="visibility:hidden">Hello</div>
+        <!--      <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">-->
+      </div>
+
+      <div class="w3-col m4">
+        Phase separation in Lipid Bilayer Vesicles under tension
+        <a href="http://reports.ias.ac.in/report/13794/phase-separation-in-lipid-bilayer-vesicles-under-tension"
+          target="_blank"><img src="internships/rri/screenshot2.png" style="width:100%" class="w3-hover-opacity"
+            alt="Phase separation in Lipid Bilayer Vesicles under tension"></a>
+      </div>
+
+      <div class="w3-col m4">
+        <div style="visibility:hidden">World</div>
+        <!--      <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">-->
+      </div>
+      <!--
+    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>	-->
+    </div>
+
+    <br><br>
+    <h3 class="w3-center">MY EXPLOITS</h3>
+    <p class="w3-center"><em>Here is my latest exploit.<br> Click to visit Photo gallery.</em></p><br>
+
+    <div class="w3-row-padding w3-center w3-section">
+      <div class="w3-col m4">
+        A trip to Nagalapuram, Andhra Pradesh
+        <a href="expeditions/nagalapuram/index.html" target="_blank"><img
+            src="expeditions/nagalapuram/IMG_20170909_112711.jpg" style="width:100%" class="w3-hover-opacity"
+            alt="A trip to Nagalapuram"></a>
+      </div>
+
+      <div class="w3-col m4">
+        A trip to Pondicherry, Tamil Nadu
+        <a href="expeditions/pondicherry/index.html" target="_blank"><img
+            src="expeditions/pondicherry/IMG_20180408_061311158.jpg" style="width:100%" class="w3-hover-opacity"
+            alt="A trip to Pondicherry"></a>
+      </div>
+
+      <div class="w3-col m4">
+        A trip to Nandi hills, Karnataka
+        <a href="expeditions/nandi/index.html" target="_blank"><img src="expeditions/nandi/cover.png" style="width:100%"
+            class="w3-hover-opacity" alt="A trip to Nandi hills"></a>
+      </div>
+
+      <div class="w3-col m4">
+        A trip to Ranipuram, Kerala
+        <a href="expeditions/ranipuram/index.html" target="_blank"><img
+            src="expeditions/ranipuram/IMG_20181225_134238.jpg" style="width:100%" class="w3-hover-opacity"
+            alt="A trip to Nandi hills"></a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+    <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i
+        class="fa fa-remove"></i></span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption" class="w3-opacity w3-large"></p>
+    </div>
+  </div>
+
+  <!-- Third Parallax Image with Portfolio Text -->
+  <div class="bgimg-3 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+    </div>
+  </div>
+
+  <!-- Container (Contact Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="contact">
+    <h3 class="w3-center">WHERE I WORK</h3>
+    <p class="w3-center"><em>I'd love your feedback!</em></p>
+
+    <div class="w3-row w3-padding-32 w3-section">
+      <div class="w3-col m4 w3-container">
+        <!-- Add Google Maps -->
+        <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
+      </div>
+      <div class="w3-col m8 w3-panel">
+        <div class="w3-large w3-margin-bottom">
+          <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> IIT Madras, Tamil Nadu,
+          India<br>
+          <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +91 7012810812<br>
+          <i class="fa fa-whatsapp fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> WhatsApp: +91
+          7012810812<br>
+          <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email:
+          sentientasins@gmail.com<br>
         </div>
-        <textarea class="w3-input w3-border" placeholder="Message" required name="message" id="message" rows="7"></textarea>
-        <button class="w3-button w3-black w3-right w3-section" onClick="sendOverlay()">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </form>
+        <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+        <form method="POST" id="gform">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="name" id="name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="email" id="email">
+            </div>
+          </div>
+          <textarea class="w3-input w3-border" placeholder="Message" required name="message" id="message"
+            rows="7"></textarea>
+          <button class="w3-button w3-black w3-right w3-section" onClick="sendOverlay()">
+            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          </button>
+        </form>
 
-    <div class="overlay" id="overlay">
-		<div class="w3-center w3-padding-large w3-black w3-xlarge w3-wide" id="overlayText" style="display:none">Submitting your response . . .</div>
-	</div>
+        <div class="overlay" id="overlay">
+          <div class="w3-center w3-padding-large w3-black w3-xlarge w3-wide" id="overlayText" style="display:none">
+            Submitting your response . . .</div>
+        </div>
 
-	  <!-- Customise the Thankyou Message People See when they submit the form: -->
-      <div style="display:none;" class="thankyou_message">
-      <h2><em>Thanks</em> for your submission!
-        I'll contact you soon!</h2>
+        <!-- Customise the Thankyou Message People See when they submit the form: -->
+        <div style="display:none;" class="thankyou_message">
+          <h2><em>Thanks</em> for your submission!
+            I'll contact you soon!</h2>
+        </div>
+
       </div>
-
-   </div>
+    </div>
   </div>
-</div>
 
-<div style="display: none;"><a href="https://smallseotools.com/visitor-hit-counter/" target="_blank" title="Visitor Hit Counter"><img src="https://smallseotools.com/counterDisplay?code=a120575be849928c2fd8a423dedc1809&style=0004&pad=5&type=page&initCount=540"  title="Visitor Hit Counter" Alt="Visitor Hit Counter" border="0">
-</a></div>
+  <div style="display: none;"><a href="https://smallseotools.com/visitor-hit-counter/" target="_blank"
+      title="Visitor Hit Counter"><img
+        src="https://smallseotools.com/counterDisplay?code=a120575be849928c2fd8a423dedc1809&style=0004&pad=5&type=page&initCount=540"
+        title="Visitor Hit Counter" Alt="Visitor Hit Counter" border="0">
+    </a></div>
 
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-    <label title="Follow me on Facebook"><a href="https://www.facebook.com/mohammad.jibin.3" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a></label>
-    <label title="Follow me on Tumblr"><a href="https://www.tumblr.com/blog/sentienta" target="_blank"><i class="fa fa-tumblr w3-hover-opacity"></i></a></label>
-    <label title="Follow me on Instagram"><a href="https://www.instagram.com/sentientasins" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a></label>
-    <label title="Follow me on Twitter"><a href="https://twitter.com/MohammadJibin" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a></label>
-    <label title="Follow me on LinkedIn"><a href="https://www.linkedin.com/in/mohammad-jibin-a8922b145/?trk=uno-choose-ge-no-intent&dl=no" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a></label>
-	<label title="Follow me on Telegram"><a href="https://web.telegram.org/#/im?p=@Sentienta" target="_blank"><i class="fa fa-telegram w3-hover-opacity"></i></a></label>
-	<label title="Follow me on MyAnimeList"><a href="https://myanimelist.net/profile/Sentienta" target="_blank"><i class="w3-hover-opacity"><img src="malicon.jpg" height="25"></i></a></label>
-  </div>
-  <h3>Thank you for visiting!</h3>
-</footer>
- 
-<script>
-var myVar;
+  <!-- Footer -->
+  <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <div class="w3-xlarge w3-section">
+      <label title="Follow me on Facebook"><a href="https://www.facebook.com/mohammad.jibin.3" target="_blank"><i
+            class="fa fa-facebook-official w3-hover-opacity"></i></a></label>
+      <label title="Follow me on Tumblr"><a href="https://www.tumblr.com/blog/sentienta" target="_blank"><i
+            class="fa fa-tumblr w3-hover-opacity"></i></a></label>
+      <label title="Follow me on Instagram"><a href="https://www.instagram.com/sentientasins" target="_blank"><i
+            class="fa fa-instagram w3-hover-opacity"></i></a></label>
+      <label title="Follow me on Twitter"><a href="https://twitter.com/MohammadJibin" target="_blank"><i
+            class="fa fa-twitter w3-hover-opacity"></i></a></label>
+      <label title="Follow me on LinkedIn"><a href="https://www.linkedin.com/in/sentienta-sins/" target="_blank"><i
+            class="fa fa-linkedin w3-hover-opacity"></i></a></label>
+      <label title="Follow me on Telegram"><a href="https://web.telegram.org/#/im?p=@Sentienta" target="_blank"><i
+            class="fa fa-telegram w3-hover-opacity"></i></a></label>
+      <label title="Follow me on Reddit"><a href="https://www.reddit.com/user/Sins7Sentienta/" target="_blank"><i
+            class="fa fa-reddit w3-hover-opacity"></i></a></label>
+    </div>
+    <h3>Thank you for visiting!</h3>
+  </footer>
 
-function sendOverlay() {
-	document.getElementById("page").style.opacity = 0.3;
-	document.getElementById("overlayText").style.display = "block";
-    myVar = setTimeout(showPage, 2000);
-}
+  <script>
+    var myVar;
 
-function showPage() {
-  document.getElementById("page").style.opacity = 1;
-  document.getElementById("overlay").style.opacity = 0;
-  document.getElementById("overlayText").style.display = "none";
-}
+    function sendOverlay() {
+      document.getElementById("page").style.opacity = 0.3;
+      document.getElementById("overlayText").style.display = "block";
+      myVar = setTimeout(showPage, 2000);
+    }
 
-function myMap()
-{
-  myCenter=new google.maps.LatLng(12.9915, 80.2337);
-  var mapOptions= {
-    center:myCenter,
-    zoom:14, scrollwheel: false, draggable: false,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+    function showPage() {
+      document.getElementById("page").style.opacity = 1;
+      document.getElementById("overlay").style.opacity = 0;
+      document.getElementById("overlayText").style.display = "none";
+    }
 
-  var marker = new google.maps.Marker({
-    position: myCenter,
-  });
-  marker.setMap(map);
-}
+    function myMap() {
+      myCenter = new google.maps.LatLng(12.9915, 80.2337);
+      var mapOptions = {
+        center: myCenter,
+        zoom: 14, scrollwheel: false, draggable: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
 
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
+      var marker = new google.maps.Marker({
+        position: myCenter,
+      });
+      marker.setMap(map);
+    }
 
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+
+    // Change style of navbar on scroll
+    window.onscroll = function () { myFunction() };
+    function myFunction() {
+      var navbar = document.getElementById("myNavbar");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         navbar.className = "w3-bar" + " w3-card-2" + " w3-animate-top" + " w3-white";
-    } else {
+      } else {
         navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
+      }
     }
-}
 
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function toggleFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
-    } else {
+      } else {
         x.className = x.className.replace(" w3-show", "");
+      }
     }
-}
-</script>
+  </script>
 
   <!-- Add Google Maps -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-Q0JQNZsbXg6e7PSIGjHbFaOVfyJ9Vkg&callback=myMap"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-Q0JQNZsbXg6e7PSIGjHbFaOVfyJ9Vkg&callback=myMap"></script>
 
   <!-- Submit the Form to Google Using "AJAX" -->
-<!--   <script data-cfasync="false" type="text/javascript"
+  <!--   <script data-cfasync="false" type="text/javascript"
   src="form-submission-handler.js"></script> -->
 
 </body>
+
 </html>
